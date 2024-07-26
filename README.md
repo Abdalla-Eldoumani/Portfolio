@@ -39,7 +39,7 @@ To get started with this project, follow these steps:
 1. Clone the repository:
 
 ```bash
-git clone [This repo](https://github.com/zpicy69/Headstarter_Portfolio.git)
+git clone https://github.com/zpicy69/Headstarter_Portfolio.git
 ```
 
 2. Change into the project directory:
