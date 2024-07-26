@@ -1,4 +1,3 @@
-/* eslint-disable react/no-unescaped-entities */
 "use client";
 
 import { motion } from 'framer-motion';
@@ -18,7 +17,7 @@ export const HeroSection = () => {
           transition={{ duration: 1 }}
           className="text-4xl sm:text-6xl font-bold"
         >
-          Hey, I'm <p className="inline bg-clip-text text-transparent bg-gradient-to-r from-red-400 via-yellow-400 to-green-400 animate-rainbow">Abdalla Eldoumani</p>
+          Hey, I&apos;m <p className="inline bg-clip-text text-transparent bg-gradient-to-r from-red-400 via-yellow-400 to-green-400 animate-rainbow">Abdalla Eldoumani</p>
         </motion.h1>
         <motion.div
           initial={{ opacity: 0, scale: 0.8 }}
@@ -41,7 +40,7 @@ export const HeroSection = () => {
           transition={{ duration: 1, delay: 1 }}
           className="text-4xl sm:text-6xl mt-4 typewriter"
         >
-          and I'm a{" "}
+          and I&apos;m a{" "}
           <Typewriter
             words={[
               'Full Stack Developer👨',

@@ -1,4 +1,3 @@
-/* eslint-disable react/no-unescaped-entities */
 "use client";
 
 import { motion } from 'framer-motion';
@@ -17,7 +16,7 @@ export const Contact = () => {
         Contact
       </h2>
       <p className="text-lg mb-6">
-        Feel free to get in touch with me for any inquiries, collaboration opportunities, or just to say hello. I'm always open to discussing new projects, sharing insights, and exploring how we can work together to create innovative solutions. Whether you have a question about my work, a project proposal, or simply want to connect, don't hesitate to reach out. I look forward to hearing from you!
+        Feel free to get in touch with me for any inquiries, collaboration opportunities, or just to say hello. I&apos;m always open to discussing new projects, sharing insights, and exploring how we can work together to create innovative solutions. Whether you have a question about my work, a project proposal, or simply want to connect, don&apos;t hesitate to reach out. I look forward to hearing from you!
       </p>
       <div className="flex justify-center space-x-8 mb-6">
         <a href="https://www.linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer" className="bg-gray-800 p-4 rounded-full hover:bg-gray-700 transition duration-300">
