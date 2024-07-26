@@ -108,5 +108,5 @@ portfolio-website/
 
 **Feel free to get in touch with me for any inquiries, collaboration opportunities, or just to say hello. You can reach me through the following**:
 
-LinkedIn: [Your LinkedIn Profile](https://www.linkedin.com/in/abdalla-el-doumani-77402a253/)
+LinkedIn: [Linkedin](https://www.linkedin.com/in/abdalla-el-doumani-77402a253/)
 Email: aamsdoumani@gmail.com
