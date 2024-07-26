@@ -3,6 +3,8 @@ import { HeroSection } from "@/components/hero-section";
 import { About } from "@/components/about";
 import { Skills } from "@/components/skills";
 import { Experience } from "@/components/experience";
+import { Projects } from "@/components/projects";
+import { Contact } from "@/components/contact";
 
 export default function Home() {
   return (
@@ -20,9 +22,11 @@ export default function Home() {
       <div id="experience" className="bg-slate-950 text-white">
         <Experience />
       </div>
-      {/* Other sections */}
-      <div id="contact">
-        {/* Contact Section Content */}
+      <div id="projects" className="bg-slate-950 text-white">
+        <Projects />
+      </div>
+      <div id="contact" className="bg-slate-950 text-white">
+        <Contact />
       </div>
     </>
   );

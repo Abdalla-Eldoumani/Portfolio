@@ -18,6 +18,15 @@ const config = {
       },
     },
     extend: {
+      backdropBlur: {
+        'none': 'none',
+        'sm': '4px',
+        '': '8px',
+        'md': '12px',
+        'lg': '16px',
+        'xl': '24px',
+        '2xl': '40px',
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
