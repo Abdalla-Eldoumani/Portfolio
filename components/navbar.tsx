@@ -83,22 +83,22 @@ export const Navbar = () => {
       <div className={`md:hidden ${isOpen ? 'block' : 'hidden'}`}>
         <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
           <Link href="#home">
-            <span className="block px-3 py-2 rounded-md text-base font-medium hover:rainbow-glow cursor-pointer transition duration-300">Home</span>
+            <span className="block px-3 py-2 rounded-md text-base font-medium text-gray-400 hover:rainbow-glow cursor-pointer transition duration-300">Home</span>
           </Link>
           <Link href="#about">
-            <span className="block px-3 py-2 rounded-md text-base font-medium hover:rainbow-glow cursor-pointer transition duration-300">About</span>
+            <span className="block px-3 py-2 rounded-md text-base font-medium text-gray-400 hover:rainbow-glow cursor-pointer transition duration-300">About</span>
           </Link>
           <Link href="#skills">
-            <span className="block px-3 py-2 rounded-md text-base font-medium hover:rainbow-glow cursor-pointer transition duration-300">Skills</span>
+            <span className="block px-3 py-2 rounded-md text-base font-medium text-gray-400 hover:rainbow-glow cursor-pointer transition duration-300">Skills</span>
           </Link>
           <Link href="#experience">
-            <span className="block px-3 py-2 rounded-md text-base font-medium hover:rainbow-glow cursor-pointer transition duration-300">Experience</span>
+            <span className="block px-3 py-2 rounded-md text-base font-medium text-gray-400 hover:rainbow-glow cursor-pointer transition duration-300">Experience</span>
           </Link>
           <Link href="#projects">
-            <span className="block px-3 py-2 rounded-md text-base font-medium hover:rainbow-glow cursor-pointer transition duration-300">Projects</span>
+            <span className="block px-3 py-2 rounded-md text-base font-medium text-gray-400 hover:rainbow-glow cursor-pointer transition duration-300">Projects</span>
           </Link>
           <Link href="#contact">
-            <span className="block px-3 py-2 rounded-md text-base font-medium hover:rainbow-glow cursor-pointer transition duration-300">Contact</span>
+            <span className="block px-3 py-2 rounded-md text-base font-medium text-gray-400 hover:rainbow-glow cursor-pointer transition duration-300">Contact</span>
           </Link>
         </div>
       </div>
