@@ -19,13 +19,13 @@ export const Contact = () => {
         Feel free to get in touch with me for any inquiries, collaboration opportunities, or just to say hello. I&apos;m always open to discussing new projects, sharing insights, and exploring how we can work together to create innovative solutions. Whether you have a question about my work, a project proposal, or simply want to connect, don&apos;t hesitate to reach out. I look forward to hearing from you!
       </p>
       <div className="flex justify-center space-x-8 mb-6">
-        <a href="https://www.linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer" className="bg-gray-800 p-4 rounded-full hover:bg-gray-700 transition duration-300">
+        <a href="https://www.linkedin.com/in/abdalla-el-doumani-77402a253/" target="_blank" rel="noopener noreferrer" className="bg-gray-800 p-4 rounded-full hover:bg-gray-700 transition duration-300">
           <FaLinkedin className="text-2xl text-white" />
         </a>
-        <a href="mailto:youremail@example.com" target="_blank" rel="noopener noreferrer" className="bg-gray-800 p-4 rounded-full hover:bg-gray-700 transition duration-300">
+        <a href="mailto:aamsdoumani@gmail.com" target="_blank" rel="noopener noreferrer" className="bg-gray-800 p-4 rounded-full hover:bg-gray-700 transition duration-300">
           <FaEnvelope className="text-2xl text-white" />
         </a>
-        <a href="https://github.com/yourprofile" target="_blank" rel="noopener noreferrer" className="bg-gray-800 p-4 rounded-full hover:bg-gray-700 transition duration-300">
+        <a href="https://github.com/zpicy69" target="_blank" rel="noopener noreferrer" className="bg-gray-800 p-4 rounded-full hover:bg-gray-700 transition duration-300">
           <FaGithub className="text-2xl text-white" />
         </a>
       </div>
