@@ -25,7 +25,7 @@ export const Contact = () => {
         <a href="mailto:aamsdoumani@gmail.com" target="_blank" rel="noopener noreferrer" className="bg-gray-800 p-4 rounded-full hover:bg-gray-700 transition duration-300">
           <FaEnvelope className="text-2xl text-white" />
         </a>
-        <a href="https://github.com/zpicy69" target="_blank" rel="noopener noreferrer" className="bg-gray-800 p-4 rounded-full hover:bg-gray-700 transition duration-300">
+        <a href="https://github.com/Abdalla-Eldoumani" target="_blank" rel="noopener noreferrer" className="bg-gray-800 p-4 rounded-full hover:bg-gray-700 transition duration-300">
           <FaGithub className="text-2xl text-white" />
         </a>
       </div>
