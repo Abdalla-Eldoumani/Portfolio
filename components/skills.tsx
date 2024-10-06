@@ -1,8 +1,9 @@
 "use client";
 
 import { motion } from 'framer-motion';
-import { FaReact, FaNodeJs, FaDocker, FaGitAlt, FaDatabase, FaPython, FaJava, FaCss3Alt } from 'react-icons/fa';
-import { SiTypescript, SiCplusplus, SiGnubash , SiNextdotjs, SiTailwindcss, SiMongodb, SiPostgresql, SiExpress, SiJunit5 , SiAssemblyscript, SiPytest, SiSupabase  } from 'react-icons/si';
+import { FaReact, FaNodeJs, FaDocker, FaGitAlt, FaDatabase, FaPython, FaJava, FaCss3Alt, FaNpm } from 'react-icons/fa';
+import { SiTypescript, SiCplusplus, SiGnubash , SiNextdotjs, SiTailwindcss, SiMongodb, SiPostgresql, SiExpress, SiJunit5 , SiAssemblyscript, SiPytest, SiSupabase, SiFirebase, SiVercel } from 'react-icons/si';
+import { TbBrandDjango } from "react-icons/tb";
 
 const skillsData = [
   {
@@ -24,6 +25,7 @@ const skillsData = [
       { name: "Next.js", icon: SiNextdotjs },
       { name: "Express.js", icon: SiExpress },
       { name: "TailwindCSS", icon: SiTailwindcss },
+      { name: "Django", icon: TbBrandDjango },
     ],
   },
   {
@@ -33,6 +35,7 @@ const skillsData = [
       { name: "MongoDB", icon: SiMongodb },
       { name: "SQL", icon: FaDatabase },
       { name: "PostgreSQL", icon: SiPostgresql },
+      { name: "Firebase", icon: SiFirebase },
     ],
   },
   {
@@ -48,6 +51,8 @@ const skillsData = [
       { name: "Shell", icon: SiGnubash },
       { name: "Git", icon: FaGitAlt },
       { name: "Docker", icon: FaDocker },
+      { name: "Vercel", icon: SiVercel },
+      { name: "npm", icon: FaNpm },
     ],
   },
 ];
