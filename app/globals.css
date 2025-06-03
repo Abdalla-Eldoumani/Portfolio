@@ -47,6 +47,27 @@ html {
   }
 }
 
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+.gradient-shift {
+  background-size: 200% 200%;
+  animation: gradientShift 8s ease infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .gradient-shift,
+  .animate-rainbow {
+    animation: none;
+  }
+}
+
 .hover\:rainbow-glow:hover {
   animation: rainbowGlow 2s linear infinite;
 }

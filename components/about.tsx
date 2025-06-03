@@ -7,11 +7,11 @@ import Link from 'next/link';
 export const About = () => {
   return (
     <motion.div
-      data-aos="fade-up"
       id="about"
-      initial={{ opacity: 0, y: 50 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 1 }}
+      initial={{ opacity: 0, x: -50 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      viewport={{ amount: 0.3 }}
+      transition={{ duration: 0.8 }}
       className="max-w-4xl mx-auto p-8 bg-slate-950 text-white"
     >
       <h2 className="text-4xl font-bold mb-6 bg-clip-text bg-gradient-to-r from-red-400 via-yellow-400 to-green-400 animate-rainbow text-center">
@@ -22,9 +22,13 @@ export const About = () => {
       </p>
       <div className="text-center">
         <Link href="/resume">
-          <span className="inline-block bg-gradient-to-r from-green-400 to-blue-500 text-white font-semibold py-2 px-4 rounded-full hover:from-blue-500 hover:to-green-400 transition duration-300">
+          <motion.span
+            whileHover={{ scale: 1.05 }}
+            transition={{ duration: 0.3 }}
+            className="inline-block bg-gradient-to-r from-green-400 to-blue-500 text-white font-semibold py-2 px-4 rounded-full hover:from-blue-500 hover:to-green-400"
+          >
             View Resume
-          </span>
+          </motion.span>
         </Link>
       </div>
     </motion.div>

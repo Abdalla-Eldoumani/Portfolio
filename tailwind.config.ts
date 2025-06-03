@@ -72,6 +72,10 @@ const config = {
           '0%, 100%': { 'background-position': '0% 50%' },
           '50%': { 'background-position': '100% 50%' },
         },
+        gradientShift: {
+          '0%': { 'background-position': '0% 50%' },
+          '100%': { 'background-position': '100% 50%' },
+        },
         "accordion-down": {
           from: { height: "0" },
           to: { height: "var(--radix-accordion-content-height)" },
@@ -83,8 +87,12 @@ const config = {
       },
       animation: {
         "rainbow": 'rainbow 1s linear infinite',
+        "gradient-shift": 'gradientShift 8s ease infinite',
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+      },
+      transitionDuration: {
+        500: '500ms',
       },
     },
   },

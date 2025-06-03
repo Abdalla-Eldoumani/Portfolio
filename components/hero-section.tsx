@@ -1,19 +1,26 @@
 "use client";
 
-import { motion } from 'framer-motion';
+import { motion, useScroll, useTransform } from 'framer-motion';
 import Image from 'next/image';
 import { Typewriter } from 'react-simple-typewriter';
 
 export const HeroSection = () => {
+  const { scrollY } = useScroll();
+  const y = useTransform(scrollY, [0, 300], [0, -100]);
+
+  const scrollDown = () => {
+    document.querySelector('#about')?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <div
       className="relative h-screen bg-slate-950 text-white flex items-center justify-center"
       data-aos="fade-in"
     >
-      <video className="absolute inset-0 w-full h-full object-cover" autoPlay muted loop>
+      <motion.video style={{ y }} className="absolute inset-0 w-full h-full object-cover" autoPlay muted loop>
         <source src="/videos/background.mp4" type="video/mp4" />
-      </video>
-      <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/30 to-black/60" />
+      </motion.video>
+      <div className="absolute inset-0 gradient-shift bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 opacity-60" />
       <div className="relative z-10 text-center flex flex-col items-center">
         <motion.h1
           initial={{ opacity: 0, y: -50 }}
@@ -55,10 +62,26 @@ export const HeroSection = () => {
             loop={true}
             cursor
             cursorStyle="|"
-            typeSpeed={70}
+            typeSpeed={100}
             deleteSpeed={50}
-            delaySpeed={1000}
+            delaySpeed={800}
           />
+        </motion.div>
+        <motion.div
+          className="mt-10 cursor-pointer"
+          animate={{ scale: [1, 1.2, 1] }}
+          transition={{ repeat: Infinity, duration: 1.5 }}
+          onClick={scrollDown}
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className="h-8 w-8"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
+          </svg>
         </motion.div>
       </div>
     </div>

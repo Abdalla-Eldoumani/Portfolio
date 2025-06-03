@@ -2,6 +2,7 @@
 "use client";
 
 import { motion } from 'framer-motion';
+import { useTilt } from '@/lib/useTilt';
 import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
 
 const projectsData = [
@@ -35,6 +36,43 @@ const projectsData = [
   },
 ];
 
+const ProjectCard = ({ project }: { project: typeof projectsData[number] }) => {
+  const tilt = useTilt();
+  return (
+    <motion.div
+      ref={tilt.ref}
+      className="bg-slate-800 p-4 rounded-lg shadow-md"
+      initial={{ scale: 0.95 }}
+      animate={{ scale: 1 }}
+      transition={{ duration: 0.5, ease: 'easeOut' }}
+    >
+      <motion.div
+        whileHover={{ scale: 1.02 }}
+        className="overflow-hidden rounded-lg mb-4 relative"
+      >
+        <img src={project.image} alt={project.name} className="w-full h-48 object-cover cursor-pointer" />
+        <motion.div
+          initial={{ y: '-100%' }}
+          whileHover={{ y: 0 }}
+          transition={{ type: 'spring', stiffness: 120, damping: 15 }}
+          className="absolute inset-0 bg-black/70 text-white flex flex-col justify-center items-center p-4"
+        >
+          <p className="text-sm mb-2">{project.description}</p>
+          <div className="flex space-x-4">
+            <a href={project.github} target="_blank" rel="noopener noreferrer">
+              <FaGithub className="text-2xl" />
+            </a>
+            <a href={project.live} target="_blank" rel="noopener noreferrer">
+              <FaExternalLinkAlt className="text-2xl" />
+            </a>
+          </div>
+        </motion.div>
+      </motion.div>
+      <h3 className="text-xl font-semibold mb-2">{project.name}</h3>
+    </motion.div>
+  );
+};
+
 export const Projects = () => {
   return (
     <motion.div
@@ -49,35 +87,8 @@ export const Projects = () => {
         Projects
       </h2>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-        {projectsData.map((project, index) => (
-          <div
-            key={index}
-            data-aos="zoom-in"
-            className="bg-slate-800 p-4 rounded-lg shadow-md"
-          >
-            <motion.div
-              whileHover={{ scale: 1.05 }}
-              className="overflow-hidden rounded-lg mb-4"
-            >
-              <img
-                src={project.image}
-                alt={project.name}
-                className="w-full h-48 object-cover cursor-pointer"
-              />
-            </motion.div>
-            <div className="flex justify-between items-center mb-4">
-              <h3 className="text-xl font-semibold">{project.name}</h3>
-              <div className="flex space-x-4">
-                <a href={project.github} target="_blank" rel="noopener noreferrer">
-                  <FaGithub className="text-2xl cursor-pointer hover:text-gray-400" />
-                </a>
-                <a href={project.live} target="_blank" rel="noopener noreferrer">
-                  <FaExternalLinkAlt className="text-2xl cursor-pointer hover:text-gray-400" />
-                </a>
-              </div>
-            </div>
-            <p className="text-sm text-gray-400">{project.description}</p>
-          </div>
+        {projectsData.map((project) => (
+          <ProjectCard key={project.name} project={project} />
         ))}
       </div>
     </motion.div>

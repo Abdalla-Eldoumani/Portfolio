@@ -20,19 +20,45 @@ export const Contact = () => {
         Feel free to get in touch with me for any inquiries, collaboration opportunities, or just to say hello. I&apos;m always open to discussing new projects, sharing insights, and exploring how we can work together to create innovative solutions. Whether you have a question about my work, a project proposal, or simply want to connect, don&apos;t hesitate to reach out. I look forward to hearing from you!
       </p>
       <div className="flex justify-center space-x-8 mb-6">
-        <a href="https://www.linkedin.com/in/abdallaeldoumani/" target="_blank" rel="noopener noreferrer" className="bg-gray-800 p-4 rounded-full hover:bg-gray-700 transition duration-300">
+        <motion.a
+          href="https://www.linkedin.com/in/abdallaeldoumani/"
+          target="_blank"
+          rel="noopener noreferrer"
+          whileHover={{ scale: 1.2, rotate: [0, 10, -10, 0] }}
+          transition={{ duration: 0.5 }}
+          className="bg-gray-800 p-4 rounded-full focus:outline-none"
+        >
           <FaLinkedin className="text-2xl text-white" />
-        </a>
-        <a href="mailto:aamsdoumani@gmail.com" target="_blank" rel="noopener noreferrer" className="bg-gray-800 p-4 rounded-full hover:bg-gray-700 transition duration-300">
+        </motion.a>
+        <motion.a
+          href="mailto:aamsdoumani@gmail.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          whileHover={{ scale: 1.2, rotate: [0, 10, -10, 0] }}
+          transition={{ duration: 0.5 }}
+          className="bg-gray-800 p-4 rounded-full focus:outline-none"
+        >
           <FaEnvelope className="text-2xl text-white" />
-        </a>
-        <a href="https://github.com/Abdalla-Eldoumani" target="_blank" rel="noopener noreferrer" className="bg-gray-800 p-4 rounded-full hover:bg-gray-700 transition duration-300">
+        </motion.a>
+        <motion.a
+          href="https://github.com/Abdalla-Eldoumani"
+          target="_blank"
+          rel="noopener noreferrer"
+          whileHover={{ scale: 1.2, rotate: [0, 10, -10, 0] }}
+          transition={{ duration: 0.5 }}
+          className="bg-gray-800 p-4 rounded-full focus:outline-none"
+        >
           <FaGithub className="text-2xl text-white" />
-        </a>
+        </motion.a>
       </div>
-      <div className="border-t border-gray-700 mt-8 pt-4">
+      <motion.div
+        className="border-t border-gray-700 mt-8 pt-4"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1 }}
+      >
         &copy; Abdalla Eldoumani {new Date().getFullYear()}
-      </div>
+      </motion.div>
     </motion.div>
   );
 };
