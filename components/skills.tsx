@@ -60,6 +60,7 @@ const skillsData = [
 export const Skills = () => {
   return (
     <motion.div
+      data-aos="fade-up"
       id="skills"
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}

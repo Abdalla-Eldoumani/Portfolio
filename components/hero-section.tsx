@@ -6,10 +6,14 @@ import { Typewriter } from 'react-simple-typewriter';
 
 export const HeroSection = () => {
   return (
-    <div className="relative h-screen bg-slate-950 text-white flex items-center justify-center">
+    <div
+      className="relative h-screen bg-slate-950 text-white flex items-center justify-center"
+      data-aos="fade-in"
+    >
       <video className="absolute inset-0 w-full h-full object-cover" autoPlay muted loop>
         <source src="/videos/background.mp4" type="video/mp4" />
       </video>
+      <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/30 to-black/60" />
       <div className="relative z-10 text-center flex flex-col items-center">
         <motion.h1
           initial={{ opacity: 0, y: -50 }}

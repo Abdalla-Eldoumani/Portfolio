@@ -38,6 +38,7 @@ const projectsData = [
 export const Projects = () => {
   return (
     <motion.div
+      data-aos="fade-up"
       id="projects"
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}
@@ -49,7 +50,11 @@ export const Projects = () => {
       </h2>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {projectsData.map((project, index) => (
-          <div key={index} className="bg-slate-800 p-4 rounded-lg shadow-md">
+          <div
+            key={index}
+            data-aos="zoom-in"
+            className="bg-slate-800 p-4 rounded-lg shadow-md"
+          >
             <motion.div
               whileHover={{ scale: 1.05 }}
               className="overflow-hidden rounded-lg mb-4"

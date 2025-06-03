@@ -7,6 +7,7 @@ import Link from 'next/link';
 export const About = () => {
   return (
     <motion.div
+      data-aos="fade-up"
       id="about"
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}

@@ -6,6 +6,7 @@ import { FaLinkedin, FaGithub, FaEnvelope } from 'react-icons/fa';
 export const Contact = () => {
   return (
     <motion.div
+      data-aos="fade-up"
       id="contact"
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}

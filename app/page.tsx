@@ -1,3 +1,9 @@
+"use client";
+
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 import { Navbar } from "@/components/navbar";
 import { HeroSection } from "@/components/hero-section";
 import { About } from "@/components/about";
@@ -7,6 +13,9 @@ import { Projects } from "@/components/projects";
 import { Contact } from "@/components/contact";
 
 export default function Home() {
+  useEffect(() => {
+    AOS.init({ duration: 800, once: true });
+  }, []);
   return (
     <>
       <Navbar />

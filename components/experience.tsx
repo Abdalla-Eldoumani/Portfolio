@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 export const Experience = () => {
   return (
     <motion.div
+      data-aos="fade-up"
       id="experience"
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}
