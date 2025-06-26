@@ -10,45 +10,124 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Updated 2025-focused color palette */
+:root {
+  --primary-bg: #0a0a0a;
+  --secondary-bg: #1a1a1a;
+  --accent-bg: #2a2a2a;
+  --text-primary: #ffffff;
+  --text-secondary: #a0a0a0;
+  --text-muted: #6b7280;
+  --accent-green: #10b981;
+  --accent-blue: #3b82f6;
+  --accent-purple: #8b5cf6;
+  --border-color: #374151;
+  --glass-bg: rgba(255, 255, 255, 0.05);
+  --glass-border: rgba(255, 255, 255, 0.1);
+}
+
+/* Sustainable, purposeful gradient - reduced intensity */
+@keyframes subtle-gradient {
+  0%, 100% { 
+    background-position: 0% 50%; 
+    opacity: 0.8;
+  }
+  50% { 
+    background-position: 100% 50%; 
+    opacity: 1;
+  }
+}
+
+.accent-gradient {
+  background: linear-gradient(135deg, var(--accent-green), var(--accent-blue), var(--accent-purple));
+  background-size: 200% 200%;
+  animation: subtle-gradient 8s ease-in-out infinite;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Glassmorphism for modern 2025 look */
+.glass-effect {
+  background: var(--glass-bg);
+  backdrop-filter: blur(20px);
+  border: 1px solid var(--glass-border);
+  border-radius: 16px;
+}
+
+/* Purposeful hover states */
+.hover-lift {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Improved focus states for accessibility */
+.focus-visible {
+  outline: 2px solid var(--accent-blue);
+  outline-offset: 2px;
+}
+
+/* Typography improvements */
+.text-gradient {
+  background: linear-gradient(135deg, var(--accent-green), var(--accent-blue));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Bento grid system */
+.bento-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.bento-card {
+  background: var(--secondary-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.bento-card:hover {
+  border-color: var(--accent-blue);
+  transform: translateY(-1px);
+}
+
+/* Reduced motion for better performance and accessibility */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Legacy rainbow animations - keeping for backwards compatibility but reducing intensity */
 @keyframes rainbow {
   0%, 100% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
 }
 
 .animate-rainbow {
-  background: linear-gradient(90deg, #ff0047, #ff8800, #ffcc00, #aaff00, #00ff88, #00ccff, #8800ff);
+  background: linear-gradient(90deg, #10b981, #3b82f6, #8b5cf6);
   background-size: 200% 200%;
-  animation: rainbow 3.5s linear infinite;
+  animation: rainbow 6s ease-in-out infinite;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 @keyframes rainbowGlow {
-  0% {
-    color: #ff0000;
-  }
-  16.6% {
-    color: #ff9900;
-  }
-  33.3% {
-    color: #ffff00;
-  }
-  50% {
-    color: #33cc33;
-  }
-  66.6% {
-    color: #00ffff;
-  }
-  83.3% {
-    color: #0066ff;
-  }
-  100% {
-    color: #cc00ff;
-  }
+  0% { color: var(--accent-green); }
+  50% { color: var(--accent-blue); }
+  100% { color: var(--accent-purple); }
 }
 
 .hover\:rainbow-glow:hover {
-  animation: rainbowGlow 2s linear infinite;
+  animation: rainbowGlow 3s ease-in-out infinite;
 }
 
 @layer base {
@@ -114,5 +193,7 @@ html {
   }
   body {
     @apply bg-background text-foreground;
+    background-color: var(--primary-bg);
+    color: var(--text-primary);
   }
 }

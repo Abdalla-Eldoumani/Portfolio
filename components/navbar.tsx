@@ -3,105 +3,210 @@
 
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
+import { Menu, X, FileText, User, Code, Briefcase, Mail, Home } from 'lucide-react';
+import { motion, AnimatePresence } from 'framer-motion';
+
+const navigationItems = [
+  { name: 'Home', href: '#home', icon: Home },
+  { name: 'About', href: '#about', icon: User },
+  { name: 'Skills', href: '#skills', icon: Code },
+  { name: 'Experience', href: '#experience', icon: Briefcase },
+  { name: 'Projects', href: '#projects', icon: FileText },
+  { name: 'Contact', href: '#contact', icon: Mail },
+];
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [activeSection, setActiveSection] = useState('home');
 
   const toggleNavbar = () => {
     setIsOpen(!isOpen);
   };
 
+  const closeNavbar = () => {
+    setIsOpen(false);
+  };
+
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 0) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
+      setIsScrolled(window.scrollY > 50);
+      
+      // Update active section based on scroll position
+      const sections = navigationItems.map(item => item.href.replace('#', ''));
+      const currentSection = sections.find(section => {
+        const element = document.getElementById(section);
+        if (element) {
+          const rect = element.getBoundingClientRect();
+          return rect.top <= 100 && rect.bottom >= 100;
+        }
+        return false;
+      });
+      
+      if (currentSection) {
+        setActiveSection(currentSection);
       }
     };
 
     window.addEventListener('scroll', handleScroll);
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const handleNavClick = (href: string) => {
+    closeNavbar();
+    const element = document.querySelector(href);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
-    <nav className={`fixed w-full z-50 transition duration-300 ${isScrolled ? 'bg-slate-900 bg-opacity-50 backdrop-blur-lg' : 'bg-slate-900'}`}>
+    <motion.nav
+      initial={{ y: -100 }}
+      animate={{ y: 0 }}
+      transition={{ duration: 0.6 }}
+      className={`fixed w-full z-50 transition-all duration-300 ${
+        isScrolled 
+          ? 'glass-effect backdrop-blur-xl shadow-lg' 
+          : 'bg-transparent'
+      }`}
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
-          <div className="hidden md:block">
-            <div className="mr-50 flex items-center space-x-32">
-              <Link href="/">
-                <span className="px-3 py-2 rounded-md text-lg text-gray-400 font-medium hover:rainbow-glow cursor-pointer transition duration-300">Home</span>
-              </Link>
-              <Link href="#about">
-                <span className="px-3 py-2 rounded-md text-lg text-gray-400 font-medium hover:rainbow-glow cursor-pointer transition duration-300">About</span>
-              </Link>
-              <Link href="#skills">
-                <span className="px-3 py-2 rounded-md text-lg text-gray-400 font-medium hover:rainbow-glow cursor-pointer transition duration-300">Skills</span>
-              </Link>
-              <Link href="#experience">
-                <span className="px-3 py-2 rounded-md text-lg text-gray-400 font-medium hover:rainbow-glow cursor-pointer transition duration-300">Experience</span>
-              </Link>
-              <Link href="#projects">
-                <span className="px-3 py-2 rounded-md text-lg text-gray-400 font-medium hover:rainbow-glow cursor-pointer transition duration-300">Projects</span>
-              </Link>
-              <Link href="#contact">
-                <span className="px-3 py-2 rounded-md text-lg text-gray-400 font-medium hover:rainbow-glow cursor-pointer transition duration-300">Contact</span>
-              </Link>
+        <div className="flex items-center justify-between h-16 lg:h-20">
+          {/* Logo */}
+          <motion.div
+            whileHover={{ scale: 1.05 }}
+            className="flex-shrink-0"
+          >
+            <Link href="/" className="text-2xl font-bold">
+              <span className="text-gradient">AE</span>
+            </Link>
+          </motion.div>
+
+          {/* Desktop Navigation */}
+          <div className="hidden lg:block">
+            <div className="flex items-center space-x-1">
+              {navigationItems.map((item) => {
+                const Icon = item.icon;
+                const isActive = activeSection === item.href.replace('#', '');
+                
+                return (
+                  <motion.button
+                    key={item.name}
+                    onClick={() => handleNavClick(item.href)}
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    className={`flex items-center space-x-2 px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 focus-visible ${
+                      isActive
+                        ? 'text-white bg-white/10 shadow-lg'
+                        : 'text-gray-300 hover:text-white hover:bg-white/5'
+                    }`}
+                  >
+                    <Icon size={16} />
+                    <span>{item.name}</span>
+                  </motion.button>
+                );
+              })}
             </div>
           </div>
-          <div className="-mr-2 flex md:hidden">
-            <button
-              onClick={toggleNavbar}
-              className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:bg-gray-700 focus:text-white"
+
+          {/* CTA Button - Desktop */}
+          <div className="hidden lg:block">
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="glass-effect px-6 py-2 rounded-full font-semibold text-sm hover:bg-white/10 transition-all duration-300 focus-visible"
             >
-              <svg className="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
-                <path
-                  className={`${isOpen ? 'hidden' : 'inline-flex'}`}
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M4 6h16M4 12h16M4 18h16"
-                />
-                <path
-                  className={`${isOpen ? 'inline-flex' : 'hidden'}`}
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M6 18L18 6M6 6l12 12"
-                />
-              </svg>
-            </button>
+              Get In Touch
+            </motion.button>
+          </div>
+
+          {/* Mobile menu button */}
+          <div className="lg:hidden">
+            <motion.button
+              whileTap={{ scale: 0.95 }}
+              onClick={toggleNavbar}
+              className="inline-flex items-center justify-center p-2 rounded-full text-gray-300 hover:text-white hover:bg-white/10 focus-visible transition-all duration-300"
+              aria-expanded="false"
+              aria-label="Toggle navigation menu"
+            >
+              <AnimatePresence mode="wait">
+                {isOpen ? (
+                  <motion.div
+                    key="close"
+                    initial={{ rotate: -90, opacity: 0 }}
+                    animate={{ rotate: 0, opacity: 1 }}
+                    exit={{ rotate: 90, opacity: 0 }}
+                    transition={{ duration: 0.2 }}
+                  >
+                    <X size={24} />
+                  </motion.div>
+                ) : (
+                  <motion.div
+                    key="menu"
+                    initial={{ rotate: 90, opacity: 0 }}
+                    animate={{ rotate: 0, opacity: 1 }}
+                    exit={{ rotate: -90, opacity: 0 }}
+                    transition={{ duration: 0.2 }}
+                  >
+                    <Menu size={24} />
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </motion.button>
           </div>
         </div>
       </div>
 
-      <div className={`md:hidden ${isOpen ? 'block' : 'hidden'}`}>
-        <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-          <Link href="#home">
-            <span className="block px-3 py-2 rounded-md text-base font-medium text-gray-400 hover:rainbow-glow cursor-pointer transition duration-300">Home</span>
-          </Link>
-          <Link href="#about">
-            <span className="block px-3 py-2 rounded-md text-base font-medium text-gray-400 hover:rainbow-glow cursor-pointer transition duration-300">About</span>
-          </Link>
-          <Link href="#skills">
-            <span className="block px-3 py-2 rounded-md text-base font-medium text-gray-400 hover:rainbow-glow cursor-pointer transition duration-300">Skills</span>
-          </Link>
-          <Link href="#experience">
-            <span className="block px-3 py-2 rounded-md text-base font-medium text-gray-400 hover:rainbow-glow cursor-pointer transition duration-300">Experience</span>
-          </Link>
-          <Link href="#projects">
-            <span className="block px-3 py-2 rounded-md text-base font-medium text-gray-400 hover:rainbow-glow cursor-pointer transition duration-300">Projects</span>
-          </Link>
-          <Link href="#contact">
-            <span className="block px-3 py-2 rounded-md text-base font-medium text-gray-400 hover:rainbow-glow cursor-pointer transition duration-300">Contact</span>
-          </Link>
-        </div>
-      </div>
-    </nav>
+      {/* Mobile Navigation Menu */}
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: 'auto' }}
+            exit={{ opacity: 0, height: 0 }}
+            transition={{ duration: 0.3 }}
+            className="lg:hidden glass-effect backdrop-blur-xl"
+          >
+            <div className="px-4 pt-2 pb-6 space-y-2">
+              {navigationItems.map((item, index) => {
+                const Icon = item.icon;
+                const isActive = activeSection === item.href.replace('#', '');
+                
+                return (
+                  <motion.button
+                    key={item.name}
+                    initial={{ opacity: 0, x: -20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.3, delay: index * 0.1 }}
+                    onClick={() => handleNavClick(item.href)}
+                    className={`flex items-center space-x-3 w-full px-4 py-3 rounded-xl text-base font-medium transition-all duration-300 focus-visible ${
+                      isActive
+                        ? 'text-white bg-white/10 shadow-lg'
+                        : 'text-gray-300 hover:text-white hover:bg-white/5'
+                    }`}
+                  >
+                    <Icon size={20} />
+                    <span>{item.name}</span>
+                  </motion.button>
+                );
+              })}
+              
+              {/* Mobile CTA */}
+              <motion.div
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.3, delay: navigationItems.length * 0.1 }}
+                className="pt-4"
+              >
+                <button className="w-full glass-effect px-4 py-3 rounded-xl font-semibold text-base hover:bg-white/10 transition-all duration-300 focus-visible">
+                  Get In Touch
+                </button>
+              </motion.div>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </motion.nav>
   );
 };

@@ -8,26 +8,34 @@ import { Contact } from "@/components/contact";
 
 export default function Home() {
   return (
-    <>
+    <div className="min-h-screen bg-slate-950">
       <Navbar />
-      <div id="home">
-        <HeroSection />
-      </div>
-      <div id="about" className="bg-slate-950 text-white">
-        <About />
-      </div>
-      <div id="skills" className="bg-slate-950 text-white">
-        <Skills />
-      </div>
-      <div id="experience" className="bg-slate-950 text-white">
-        <Experience />
-      </div>
-      <div id="projects" className="bg-slate-950 text-white">
-        <Projects />
-      </div>
-      <div id="contact" className="bg-slate-950 text-white">
-        <Contact />
-      </div>
-    </>
+      
+      <main>
+        <section id="home">
+          <HeroSection />
+        </section>
+        
+        <section id="about">
+          <About />
+        </section>
+        
+        <section id="skills">
+          <Skills />
+        </section>
+        
+        <section id="experience">
+          <Experience />
+        </section>
+        
+        <section id="projects">
+          <Projects />
+        </section>
+        
+        <section id="contact">
+          <Contact />
+        </section>
+      </main>
+    </div>
   );
 }
