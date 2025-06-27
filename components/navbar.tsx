@@ -112,6 +112,7 @@ export const Navbar = () => {
 
           {/* CTA Button - Desktop */}
           <div className="hidden lg:block">
+            <Link href="mailto:aamsdoumani@gmail.com">
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
@@ -119,6 +120,7 @@ export const Navbar = () => {
             >
               Get In Touch
             </motion.button>
+            </Link>
           </div>
 
           {/* Mobile menu button */}
@@ -199,9 +201,11 @@ export const Navbar = () => {
                 transition={{ duration: 0.3, delay: navigationItems.length * 0.1 }}
                 className="pt-4"
               >
-                <button className="w-full glass-effect px-4 py-3 rounded-xl font-semibold text-base hover:bg-white/10 transition-all duration-300 focus-visible">
-                  Get In Touch
-                </button>
+                <Link href="mailto:aamsdoumani@gmail.com">
+                  <button className="w-full glass-effect px-4 py-3 rounded-xl font-semibold text-base hover:bg-white/10 transition-all duration-300 focus-visible">
+                    Get In Touch
+                  </button>
+                </Link>
               </motion.div>
             </div>
           </motion.div>
