@@ -89,12 +89,12 @@ export const HeroSection = () => {
               className="flex flex-col sm:flex-row gap-4 pt-4"
             >
               
-              <Link href="https://github.com/Abdalla-Eldoumani">
+              <Link target="_blank" href="https://github.com/Abdalla-Eldoumani">
                 <button className="glass-effect hover-lift px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 hover:bg-white/10 focus-visible">
                   View My Work
                 </button>
               </Link>
-              <Link href="mailto:aamsdoumani@gmail.com">
+              <Link target="_blank" href="mailto:aamsdoumani@gmail.com">
                 <button className="border border-gray-600 hover:border-gray-400 px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 hover:bg-white/5 focus-visible">
                   Get In Touch
                 </button>
@@ -108,13 +108,13 @@ export const HeroSection = () => {
               transition={{ duration: 0.8, delay: 1.1 }}
               className="flex space-x-6 pt-4"
             >
-              <a href="https://github.com/Abdalla-Eldoumani" className="text-gray-400 hover:text-white transition-colors duration-300 hover-lift">
+              <a target="_blank" href="https://github.com/Abdalla-Eldoumani" className="text-gray-400 hover:text-white transition-colors duration-300 hover-lift">
                 <Github size={28} />
               </a>
-              <a href="https://www.linkedin.com/in/abdallaeldoumani/" className="text-gray-400 hover:text-white transition-colors duration-300 hover-lift">
+              <a target="_blank" href="https://www.linkedin.com/in/abdallaeldoumani/" className="text-gray-400 hover:text-white transition-colors duration-300 hover-lift">
                 <Linkedin size={28} />
               </a>
-              <a href="mailto:aamsdoumani@gmail.com" className="text-gray-400 hover:text-white transition-colors duration-300 hover-lift">
+              <a target="_blank" href="mailto:aamsdoumani@gmail.com" className="text-gray-400 hover:text-white transition-colors duration-300 hover-lift">
                 <Mail size={28} />
               </a>
             </motion.div>

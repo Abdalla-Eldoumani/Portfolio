@@ -87,13 +87,13 @@ export const About = () => {
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
               >
-                <Link href="/resume" className="inline-flex items-center justify-center space-x-2 glass-effect hover-lift px-6 py-3 rounded-full font-semibold transition-all duration-300 hover:bg-white/10">
+                <Link target="_blank" href="/resume" className="inline-flex items-center justify-center space-x-2 glass-effect hover-lift px-6 py-3 rounded-full font-semibold transition-all duration-300 hover:bg-white/10">
                   <Download size={20} />
                   <span>Download Resume</span>
                 </Link>
               </motion.div>
               
-              <Link href="https://www.linkedin.com/in/abdallaeldoumani/">
+              <Link target="_blank" href="https://www.linkedin.com/in/abdallaeldoumani/">
               <motion.button
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
