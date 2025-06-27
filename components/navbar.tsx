@@ -85,7 +85,7 @@ export const Navbar = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden lg:block">
-            <div className="flex items-center space-x-1">
+            <div className="flex items-center space-x-6">
               {navigationItems.map((item) => {
                 const Icon = item.icon;
                 const isActive = activeSection === item.href.replace('#', '');
