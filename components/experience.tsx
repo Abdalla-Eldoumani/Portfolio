@@ -96,7 +96,7 @@ export const Experience = () => {
               
               <div className={`glass-effect p-8 rounded-2xl hover-lift border ${exp.borderColor} relative`}>
                 {/* Timeline Dot */}
-                <div className={`absolute -left-4 top-8 w-8 h-8 ${exp.bgColor} ${exp.borderColor} border-2 rounded-full flex items-center justify-center hidden lg:flex`}>
+                <div className={`absolute -left-4 top-8 w-8 h-8 ${exp.bgColor} ${exp.borderColor} border-2 rounded-full items-center justify-center hidden lg:flex`}>
                   <exp.icon className={`w-4 h-4 ${exp.color}`} />
                 </div>
 
