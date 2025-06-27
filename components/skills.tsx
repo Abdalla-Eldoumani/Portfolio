@@ -20,7 +20,6 @@ const skillsData = [
       { name: "Python", icon: FaPython, color: "text-yellow-400" },
       { name: "Java", icon: FaJava, color: "text-red-500" },
       { name: "TypeScript", icon: SiTypescript, color: "text-blue-400" },
-      { name: "C#", icon: SiCsharp, color: "text-purple-500" },
       { name: "Assembly", icon: SiAssemblyscript, color: "text-gray-400" },
       { name: "PHP", icon: SiPhp, color: "text-indigo-500" },
       { name: "Bash", icon: SiGnubash, color: "text-green-400" },
@@ -48,7 +47,6 @@ const skillsData = [
       { name: "PostgreSQL", icon: SiPostgresql, color: "text-blue-600" },
       { name: "MongoDB", icon: SiMongodb, color: "text-green-500" },
       { name: "MySQL", icon: SiMysql, color: "text-blue-500" },
-      { name: "Oracle", icon: SiOracle, color: "text-red-600" },
       { name: "Supabase", icon: SiSupabase, color: "text-green-400" },
       { name: "Firebase", icon: SiFirebase, color: "text-orange-400" },
     ],
@@ -71,8 +69,6 @@ const skillsData = [
       { name: "Docker", icon: FaDocker, color: "text-blue-500" },
       { name: "Kubernetes", icon: SiKubernetes, color: "text-blue-600" },
       { name: "Vercel", icon: SiVercel, color: "text-white" },
-      { name: "Jenkins", icon: SiJenkins, color: "text-blue-400" },
-      { name: "Linux", icon: SiLinux, color: "text-yellow-500" },
     ],
   },
   {
@@ -83,7 +79,6 @@ const skillsData = [
       { name: "Git", icon: FaGitAlt, color: "text-orange-500" },
       { name: "Postman", icon: SiPostman, color: "text-orange-500" },
       { name: "Jira", icon: SiJira, color: "text-blue-500" },
-      { name: "Kafka", icon: SiApachekafka, color: "text-gray-300" },
     ],
   },
 ];
