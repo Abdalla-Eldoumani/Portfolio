@@ -215,34 +215,6 @@ export const Projects = () => {
             );
           })}
         </div>
-
-        {/* Call to Action */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4, ease: "easeInOut" }}
-          viewport={{ once: false, amount: 0.3 }}
-          className="mt-20 text-center"
-        >
-          <div className="glass-effect p-8 rounded-2xl max-w-3xl mx-auto">
-            <h3 className="text-2xl font-bold mb-4 text-gradient">
-              Interested in Collaborating?
-            </h3>
-            <p className="text-gray-300 mb-6">
-              I&apos;m always open to discussing new opportunities and interesting projects. 
-              Let&apos;s build something amazing together.
-            </p>
-            <Link href="mailto:aamsdoumani@gmail.com">
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="glass-effect px-8 py-3 rounded-full font-semibold hover:bg-white/10 transition-all duration-300"
-            >
-              Get In Touch
-            </motion.button>
-            </Link>
-          </div>
-        </motion.div>
       </div>
     </section>
   );
