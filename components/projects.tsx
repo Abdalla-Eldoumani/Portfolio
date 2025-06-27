@@ -59,7 +59,7 @@ const projectsData = [
     name: "Self-Checkout Station Software",
     description: "Enterprise-grade software simulation for retail self-checkout systems built with Java. Developed in a 20-member team using object-oriented programming and comprehensive testing with JUnit.",
     fullDescription: "Large-scale software engineering project simulating a complete self-checkout station system. Features responsive touchscreen interface using Java's GUI libraries, comprehensive error handling, and robust testing suite achieving 100% usability. Demonstrates strong collaboration and version control practices.",
-    image: "/images/self-checkout.png",
+    image: "/images/selfcheckout.png",
     github: "#",
     live: "#",
     tech: ["Java", "JUnit", "GUI Libraries", "Git", "Object-Oriented Programming", "Team Collaboration"],
