@@ -95,8 +95,8 @@ export const Skills = () => {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
+          transition={{ duration: 0.6, ease: "easeInOut" }}
+          viewport={{ once: false, amount: 0.3 }}
           className="text-center mb-16"
         >
           <h2 className="text-4xl sm:text-5xl font-bold mb-4">
@@ -112,22 +112,22 @@ export const Skills = () => {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          viewport={{ once: true }}
+          transition={{ duration: 0.8, delay: 0.2, ease: "easeInOut" }}
+          viewport={{ once: false, amount: 0.2 }}
           className="mb-16"
         >
           <h3 className="text-2xl font-semibold mb-8 text-center text-gray-300">Core Technologies</h3>
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
             {featuredSkills.map((skill, index) => (
-              <motion.div
-                key={skill.name}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                whileHover={{ scale: 1.05, rotate: 1 }}
-                viewport={{ once: true }}
-                className="glass-effect p-8 rounded-2xl text-center hover-lift group"
-              >
+                              <motion.div
+                  key={skill.name}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1, ease: "easeInOut" }}
+                  whileHover={{ scale: 1.05, rotate: 1 }}
+                  viewport={{ once: false, amount: 0.3 }}
+                  className="glass-effect p-8 rounded-2xl text-center hover-lift group"
+                >
                 <div className="mb-4 flex justify-center">
                   <skill.icon className={`text-5xl ${skill.color} group-hover:scale-110 transition-transform duration-300`} />
                 </div>
@@ -144,8 +144,8 @@ export const Skills = () => {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-          viewport={{ once: true }}
+          transition={{ duration: 0.8, delay: 0.4, ease: "easeInOut" }}
+          viewport={{ once: false, amount: 0.2 }}
           className="bento-grid"
         >
           {skillsData.map((category, categoryIndex) => (
@@ -153,8 +153,8 @@ export const Skills = () => {
               key={category.category}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: categoryIndex * 0.1 }}
-              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: categoryIndex * 0.1, ease: "easeInOut" }}
+              viewport={{ once: false, amount: 0.3 }}
               className={`bento-card hover-lift ${
                 category.category === 'Languages' ? 'lg:col-span-2' : 
                 category.category === 'Backend & Databases' ? 'lg:col-span-2' : ''
@@ -171,9 +171,9 @@ export const Skills = () => {
                     key={skill.name}
                     initial={{ opacity: 0, scale: 0.8 }}
                     whileInView={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 0.4, delay: skillIndex * 0.05 }}
+                    transition={{ duration: 0.4, delay: skillIndex * 0.05, ease: "easeInOut" }}
                     whileHover={{ scale: 1.1 }}
-                    viewport={{ once: true }}
+                    viewport={{ once: false, amount: 0.3 }}
                     className="flex flex-col items-center p-3 rounded-lg bg-gray-800/30 hover:bg-gray-800/50 transition-all duration-300 group"
                   >
                     <skill.icon className={`text-3xl ${skill.color} mb-2 group-hover:scale-110 transition-transform duration-300`} />
@@ -191,8 +191,8 @@ export const Skills = () => {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
-          viewport={{ once: true }}
+          transition={{ duration: 0.8, delay: 0.6, ease: "easeInOut" }}
+          viewport={{ once: false, amount: 0.3 }}
           className="mt-16 glass-effect p-8 rounded-2xl text-center"
         >
           <h3 className="text-2xl font-bold mb-4 text-gradient">Performance & Innovation Focus</h3>

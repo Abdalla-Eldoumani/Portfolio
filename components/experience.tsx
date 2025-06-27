@@ -67,8 +67,8 @@ export const Experience = () => {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
+          transition={{ duration: 0.6, ease: "easeInOut" }}
+          viewport={{ once: false, amount: 0.3 }}
           className="text-center mb-16"
         >
           <h2 className="text-4xl sm:text-5xl font-bold mb-4">
@@ -87,8 +87,8 @@ export const Experience = () => {
               key={index}
               initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
               whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, delay: index * 0.2 }}
-              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: index * 0.2, ease: "easeInOut" }}
+              viewport={{ once: false, amount: 0.2 }}
               className="relative"
             >
               {/* Timeline Line */}
@@ -151,8 +151,8 @@ export const Experience = () => {
                             key={achIndex}
                             initial={{ opacity: 0, x: 20 }}
                             whileInView={{ opacity: 1, x: 0 }}
-                            transition={{ duration: 0.5, delay: achIndex * 0.1 }}
-                            viewport={{ once: true }}
+                            transition={{ duration: 0.5, delay: achIndex * 0.1, ease: "easeInOut" }}
+                            viewport={{ once: false, amount: 0.3 }}
                             className="flex items-start space-x-3 group"
                           >
                             <FaChevronRight className="w-3 h-3 text-emerald-400 mt-2 flex-shrink-0 group-hover:translate-x-1 transition-transform" />
@@ -174,8 +174,8 @@ export const Experience = () => {
                             key={skillIndex}
                             initial={{ opacity: 0, scale: 0.8 }}
                             whileInView={{ opacity: 1, scale: 1 }}
-                            transition={{ duration: 0.3, delay: skillIndex * 0.05 }}
-                            viewport={{ once: true }}
+                            transition={{ duration: 0.3, delay: skillIndex * 0.05, ease: "easeInOut" }}
+                            viewport={{ once: false, amount: 0.3 }}
                             className="px-3 py-1 text-sm font-medium text-gray-300 bg-gray-800/50 rounded-full border border-gray-700 hover:border-gray-600 hover:bg-gray-800/70 transition-all"
                           >
                             {skill}
@@ -194,8 +194,8 @@ export const Experience = () => {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-          viewport={{ once: true }}
+          transition={{ duration: 0.8, delay: 0.4, ease: "easeInOut" }}
+          viewport={{ once: false, amount: 0.2 }}
           className="glass-effect p-8 rounded-2xl border border-purple-500/20"
         >
           <div className="flex items-center mb-6">
@@ -245,8 +245,8 @@ export const Experience = () => {
                     key={index}
                     initial={{ opacity: 0, x: 20 }}
                     whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.5, delay: index * 0.1 }}
-                    viewport={{ once: true }}
+                    transition={{ duration: 0.5, delay: index * 0.1, ease: "easeInOut" }}
+                    viewport={{ once: false, amount: 0.3 }}
                     className="flex items-start space-x-3 group"
                   >
                     <FaChevronRight className="w-3 h-3 text-purple-400 mt-2 flex-shrink-0 group-hover:translate-x-1 transition-transform" />
@@ -262,8 +262,8 @@ export const Experience = () => {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
-          viewport={{ once: true }}
+          transition={{ duration: 0.8, delay: 0.6, ease: "easeInOut" }}
+          viewport={{ once: false, amount: 0.3 }}
           className="mt-16 text-center"
         >
           <div className="glass-effect p-8 rounded-2xl max-w-3xl mx-auto">

@@ -8,6 +8,36 @@ html,body,:root{
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 80px; /* Account for fixed navbar */
+}
+
+/* Enhanced smooth scrolling for modern browsers */
+@supports (scroll-behavior: smooth) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* Page transition effects */
+body {
+  transition: opacity 0.3s ease-in-out;
+}
+
+/* Improved viewport animations */
+.viewport-animation {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.viewport-animation.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Smooth fade transitions for sections */
+section {
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
 }
 
 /* Updated 2025-focused color palette */

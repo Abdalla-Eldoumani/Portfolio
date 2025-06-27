@@ -39,8 +39,8 @@ export const About = () => {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
+          transition={{ duration: 0.6, ease: "easeInOut" }}
+          viewport={{ once: false, amount: 0.3 }}
           className="text-center mb-16"
         >
           <h2 className="text-4xl sm:text-5xl font-bold mb-4">
@@ -56,8 +56,8 @@ export const About = () => {
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            transition={{ duration: 0.8, ease: "easeInOut" }}
+            viewport={{ once: false, amount: 0.2 }}
             className="space-y-6"
           >
             <div className="space-y-4">
@@ -109,21 +109,21 @@ export const About = () => {
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.2, ease: "easeInOut" }}
+            viewport={{ once: false, amount: 0.2 }}
             className="grid grid-cols-1 sm:grid-cols-2 gap-6"
           >
             {highlights.map((item, index) => {
               const Icon = item.icon;
               return (
-                <motion.div
-                  key={item.title}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  className="bento-card hover-lift group"
-                >
+                                  <motion.div
+                    key={item.title}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: index * 0.1, ease: "easeInOut" }}
+                    viewport={{ once: false, amount: 0.3 }}
+                    className="bento-card hover-lift group"
+                  >
                   <div className="flex items-start space-x-4">
                     <div className={`p-3 rounded-xl bg-gray-800/50 ${item.color} group-hover:scale-110 transition-transform duration-300`}>
                       <Icon size={24} />
@@ -147,8 +147,8 @@ export const About = () => {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-          viewport={{ once: true }}
+          transition={{ duration: 0.8, delay: 0.4, ease: "easeInOut" }}
+          viewport={{ once: false, amount: 0.3 }}
           className="mt-20"
         >
           <div className="glass-effect p-8 rounded-2xl text-center max-w-4xl mx-auto">

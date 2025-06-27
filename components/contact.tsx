@@ -8,8 +8,9 @@ export const Contact = () => {
     <motion.div
       id="contact"
       initial={{ opacity: 0, y: 50 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 1 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 1, ease: "easeInOut" }}
+      viewport={{ once: false, amount: 0.3 }}
       className="max-w-4xl mx-auto p-8 bg-slate-950 text-white text-center"
     >
       <h2 className="text-4xl font-bold mb-6 bg-clip-text bg-gradient-to-r from-red-400 via-yellow-400 to-green-400 animate-rainbow">

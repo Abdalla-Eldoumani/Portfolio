@@ -76,8 +76,8 @@ export const Projects = () => {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
+          transition={{ duration: 0.6, ease: "easeInOut" }}
+          viewport={{ once: false, amount: 0.3 }}
           className="text-center mb-16"
         >
           <h2 className="text-4xl sm:text-5xl font-bold mb-4">
@@ -98,8 +98,8 @@ export const Projects = () => {
                 key={project.name}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}
+                transition={{ duration: 0.8, delay: index * 0.1, ease: "easeInOut" }}
+                viewport={{ once: false, amount: 0.2 }}
                 className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ${
                   project.featured && index % 2 === 1 ? 'lg:grid-flow-col-dense' : ''
                 }`}
@@ -220,8 +220,8 @@ export const Projects = () => {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-          viewport={{ once: true }}
+          transition={{ duration: 0.8, delay: 0.4, ease: "easeInOut" }}
+          viewport={{ once: false, amount: 0.3 }}
           className="mt-20 text-center"
         >
           <div className="glass-effect p-8 rounded-2xl max-w-3xl mx-auto">
