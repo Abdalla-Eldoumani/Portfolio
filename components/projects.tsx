@@ -49,7 +49,7 @@ const projectsData = [
     fullDescription: "Full-featured AI platform offering multiple AI tools from a centralized dashboard. Includes conversation AI, image/video generation, music creation, and code generation capabilities. Features secure authentication, API limit monitoring, and subscription management with Stripe integration.",
     image: "/images/ai-platform.png",
     github: "https://github.com/Abdalla-Eldoumani/AI-Platform",
-    live: "https://ai-platform-abdalla.vercel.app",
+    live: "#",
     tech: ["Next.js", "TypeScript", "OpenAI API", "Prisma", "MySQL", "Stripe"],
     featured: true,
     icon: Star,
