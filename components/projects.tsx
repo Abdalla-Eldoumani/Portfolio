@@ -23,7 +23,7 @@ const projectsData = [
     name: "Budget Buddy",
     description: "Full-stack financial management platform empowering young Canadians to make informed investment decisions. Features real-time stock data, projection tools, and comprehensive budget tracking with modern authentication.",
     fullDescription: "Budget Buddy addresses the critical issue that 70% of young Canadians avoid stock market investing. Built during CalgaryHacks24, this platform provides up-to-date financial information, real-time stock data across various sectors, and projection tools for investment planning.",
-    image: "/images/budget-buddy.png",
+    image: "/images/budgetbuddy.png",
     github: "https://github.com/Abdalla-Eldoumani/CalgaryHacks24",
     live: "https://calgary-hacks24-budget-buddy.vercel.app",
     tech: ["Next.js", "TypeScript", "TailwindCSS", "Clerk Auth", "Vercel", "Financial APIs"],
