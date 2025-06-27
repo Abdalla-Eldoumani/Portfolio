@@ -93,6 +93,7 @@ export const About = () => {
                 </Link>
               </motion.div>
               
+              <Link href="https://www.linkedin.com/in/abdallaeldoumani/">
               <motion.button
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
@@ -100,6 +101,7 @@ export const About = () => {
               >
                 <span>Let&apos;s Connect</span>
               </motion.button>
+              </Link>
             </div>
           </motion.div>
 

@@ -4,6 +4,7 @@
 import { motion } from 'framer-motion';
 import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
 import { ArrowUpRight, Code, Globe, Star } from 'lucide-react';
+import Link from 'next/link';
 
 const projectsData = [
   {
@@ -194,6 +195,7 @@ export const Projects = () => {
               I&apos;m always open to discussing new opportunities and interesting projects. 
               Let&apos;s build something amazing together.
             </p>
+            <Link href="mailto:aamsdoumani@gmail.com">
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
@@ -201,6 +203,7 @@ export const Projects = () => {
             >
               Get In Touch
             </motion.button>
+            </Link>
           </div>
         </motion.div>
       </div>
