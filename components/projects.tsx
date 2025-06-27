@@ -11,7 +11,7 @@ const projectsData = [
     name: "FastMathExt",
     description: "High-performance C++ matrix multiplication library achieving 25-41% performance gains over NumPy through advanced optimization techniques including multi-level cache blocking, AVX2 SIMD instructions, and OpenMP parallelization.",
     fullDescription: "FastMathExt is a cutting-edge mathematical computation library that demonstrates mastery of low-level optimization. The project implements Strassen's algorithm with task-based concurrency, reducing computational complexity from O(n³) to O(n^2.807) for large-scale operations. Features comprehensive benchmarking framework with statistical analysis across 10,000+ iterations.",
-    image: "/images/fastmath-ext.png",
+    image: "/images/matrix.png",
     github: "https://github.com/Abdalla-Eldoumani/FastMathExt",
     live: "#",
     tech: ["C++", "Python", "OpenMP", "AVX2 SIMD", "Strassen's Algorithm", "Performance Optimization"],
