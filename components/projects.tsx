@@ -3,49 +3,69 @@
 
 import { motion } from 'framer-motion';
 import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
-import { ArrowUpRight, Code, Globe, Star } from 'lucide-react';
+import { ArrowUpRight, Code, Globe, Star, Zap, Shield, Calculator, ShoppingCart } from 'lucide-react';
 import Link from 'next/link';
 
 const projectsData = [
   {
-    name: "Matrix Calculator",
-    description: "A user-friendly online tool for matrix calculations with modern UI design. Features interactive forms, real-time calculations, and responsive layout optimized for both desktop and mobile devices.",
-    fullDescription: "The Matrix Calculator Project is a user-friendly online tool designed to perform basic matrix calculations with ease. Users can input two matrices, specify their dimensions, and execute various operations, with results displayed in a formatted matrix structure. The project features a modern, interactive design with a gradient background, clear typography, and responsive layout that adapts to both desktop and mobile devices.",
-    image: "/images/matrix-calculator.png",
-    github: "https://github.com/zpicy69/Matrix-Calculator",
-    live: "https://matrix-calculator.vercel.app/",
-    tech: ["JavaScript", "HTML5", "CSS3", "Responsive Design"],
-    featured: false,
+    name: "FastMathExt",
+    description: "High-performance C++ matrix multiplication library achieving 25-41% performance gains over NumPy through advanced optimization techniques including multi-level cache blocking, AVX2 SIMD instructions, and OpenMP parallelization.",
+    fullDescription: "FastMathExt is a cutting-edge mathematical computation library that demonstrates mastery of low-level optimization. The project implements Strassen's algorithm with task-based concurrency, reducing computational complexity from O(n³) to O(n^2.807) for large-scale operations. Features comprehensive benchmarking framework with statistical analysis across 10,000+ iterations.",
+    image: "/images/fastmath-ext.png",
+    github: "https://github.com/Abdalla-Eldoumani/FastMathExt",
+    live: "#",
+    tech: ["C++", "Python", "OpenMP", "AVX2 SIMD", "Strassen's Algorithm", "Performance Optimization"],
+    featured: true,
+    icon: Zap,
+    metrics: "25-41% faster than NumPy"
+  },
+  {
+    name: "Budget Buddy",
+    description: "Full-stack financial management platform empowering young Canadians to make informed investment decisions. Features real-time stock data, projection tools, and comprehensive budget tracking with modern authentication.",
+    fullDescription: "Budget Buddy addresses the critical issue that 70% of young Canadians avoid stock market investing. Built during CalgaryHacks24, this platform provides up-to-date financial information, real-time stock data across various sectors, and projection tools for investment planning.",
+    image: "/images/budget-buddy.png",
+    github: "https://github.com/Abdalla-Eldoumani/CalgaryHacks24",
+    live: "https://calgary-hacks24-budget-buddy.vercel.app",
+    tech: ["Next.js", "TypeScript", "TailwindCSS", "Clerk Auth", "Vercel", "Financial APIs"],
+    featured: true,
+    icon: Calculator,
+    metrics: "Hackathon Winner"
   },
   {
     name: "Interactive Cybersecurity Site",
-    description: "Educational platform combining theoretical lectures with interactive quizzes to enhance cybersecurity knowledge. Covers cryptography, hashing, malware, and privacy through detailed content.",
-    fullDescription: "The Interactive Cybersecurity Site is an educational platform designed to enhance cybersecurity knowledge through an engaging and interactive learning experience. It targets a diverse audience, including students, professionals, and cybersecurity enthusiasts, combining theoretical lectures with practical quizzes to provide comprehensive understanding of key cybersecurity concepts.",
+    description: "Educational platform combining theoretical cybersecurity lectures with interactive quizzes. Covers cryptography, hashing, malware, and privacy through detailed content and hands-on learning experiences.",
+    fullDescription: "Comprehensive cybersecurity education platform targeting students, professionals, and enthusiasts. Features interactive quizzes on cryptography, hashing, malware, and privacy, complemented by detailed lectures on encryption methods, virus detection, and digital privacy protection.",
     image: "/images/cybersecurity-site.png",
-    github: "https://github.com/zpicy69/Interactive-Cybersecurity-Site",
-    live: "https://interactive-cybersecurity-site.vercel.app/",
-    tech: ["HTML5", "CSS3", "JavaScript", "Interactive Design"],
+    github: "https://github.com/Abdalla-Eldoumani/Interactive-Cybersecurity-Site",
+    live: "https://interactive-cybersecurity-site.vercel.app",
+    tech: ["HTML5", "CSS3", "JavaScript", "Interactive Design", "Educational Content"],
     featured: true,
+    icon: Shield,
+    metrics: "91 commits, 3 contributors"
   },
   {
-    name: "Spotify Clone",
-    description: "Full-featured music streaming application built with TypeScript and React. Includes secure authentication, real-time streaming, search functionality, and integrated payment processing.",
-    fullDescription: "The Spotify Clone project is a robust music streaming application designed using TypeScript and React, structured around the Next.js framework. This project offers users a seamless music experience with high-quality streaming, secure user authentication for registration and login, and an intuitive search functionality for easy song discovery.",
-    image: "/images/spotify-clone.png",
-    github: "https://github.com/zpicy69/Spotify-clone",
-    live: "https://spotify-clone-virid-eight.vercel.app/",
-    tech: ["Next.js", "TypeScript", "Supabase", "TailwindCSS", "Stripe"],
-    featured: true,
-  },
-  {
-    name: "AI Platform",
-    description: "Comprehensive AI-driven service platform featuring conversation generation, image/video creation, music composition, and code generation. Enhanced user engagement by 20% with optimized API routes.",
-    fullDescription: "The AI-Platform project is a comprehensive tool designed to provide users with an array of AI-driven services through a user-friendly interface. The platform features a secure authentication system and showcases various AI tools including conversation generation, image and video generation, music creation, and code generation.",
+    name: "AI-Platform",
+    description: "Comprehensive AI-driven service platform featuring conversation generation, image/video creation, music composition, and code generation. Built with modern tech stack including OpenAI API integration.",
+    fullDescription: "Full-featured AI platform offering multiple AI tools from a centralized dashboard. Includes conversation AI, image/video generation, music creation, and code generation capabilities. Features secure authentication, API limit monitoring, and subscription management with Stripe integration.",
     image: "/images/ai-platform.png",
-    github: "https://github.com/zpicy69/AI-Platform",
-    live: "https://ai-platform-1ye02usg8-zpicy69.vercel.app/",
-    tech: ["Next.js", "TypeScript", "OpenAI", "Prisma", "MySQL", "Stripe"],
+    github: "https://github.com/Abdalla-Eldoumani/AI-Platform",
+    live: "https://ai-platform-abdalla.vercel.app",
+    tech: ["Next.js", "TypeScript", "OpenAI API", "Prisma", "MySQL", "Stripe"],
     featured: true,
+    icon: Star,
+    metrics: "Multiple AI tools integrated"
+  },
+  {
+    name: "Self-Checkout Station Software",
+    description: "Enterprise-grade software simulation for retail self-checkout systems built with Java. Developed in a 20-member team using object-oriented programming and comprehensive testing with JUnit.",
+    fullDescription: "Large-scale software engineering project simulating a complete self-checkout station system. Features responsive touchscreen interface using Java's GUI libraries, comprehensive error handling, and robust testing suite achieving 100% usability. Demonstrates strong collaboration and version control practices.",
+    image: "/images/self-checkout.png",
+    github: "#",
+    live: "#",
+    tech: ["Java", "JUnit", "GUI Libraries", "Git", "Object-Oriented Programming", "Team Collaboration"],
+    featured: false,
+    icon: ShoppingCart,
+    metrics: "20-member team, 100% usability"
   },
 ];
 
@@ -64,119 +84,136 @@ export const Projects = () => {
             Featured <span className="text-gradient">Projects</span>
           </h2>
           <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-            A collection of projects showcasing my expertise in full-stack development, 
-            AI integration, and modern web technologies.
+            A showcase of innovative projects demonstrating expertise in performance optimization, 
+            AI integration, cybersecurity, and full-stack development.
           </p>
         </motion.div>
 
         {/* Featured Projects Grid */}
         <div className="space-y-16">
-          {projectsData.map((project, index) => (
-            <motion.div
-              key={project.name}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: index * 0.1 }}
-              viewport={{ once: true }}
-              className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ${
-                project.featured && index % 2 === 1 ? 'lg:grid-flow-col-dense' : ''
-              }`}
-            >
-              {/* Project Image */}
+          {projectsData.map((project, index) => {
+            const IconComponent = project.icon;
+            return (
               <motion.div
-                whileHover={{ scale: 1.02 }}
-                className={`relative group ${
-                  project.featured && index % 2 === 1 ? 'lg:col-start-2' : ''
+                key={project.name}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ${
+                  project.featured && index % 2 === 1 ? 'lg:grid-flow-col-dense' : ''
                 }`}
               >
-                <div className="glass-effect p-4 rounded-2xl overflow-hidden">
-                  <div className="relative overflow-hidden rounded-xl">
-                    <img
-                      src={project.image}
-                      alt={project.name}
-                      className="w-full h-64 lg:h-80 object-cover transition-transform duration-500 group-hover:scale-105"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                {/* Project Image */}
+                <motion.div
+                  whileHover={{ scale: 1.02 }}
+                  className={`relative group ${
+                    project.featured && index % 2 === 1 ? 'lg:col-start-2' : ''
+                  }`}
+                >
+                  <div className="glass-effect p-4 rounded-2xl overflow-hidden">
+                    <div className="relative overflow-hidden rounded-xl">
+                      <img
+                        src={project.image}
+                        alt={project.name}
+                        className="w-full h-64 lg:h-80 object-cover transition-transform duration-500 group-hover:scale-105"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    </div>
                   </div>
-                </div>
-                
-                {/* Floating Status Badge */}
-                {project.featured && (
-                  <div className="absolute -top-3 -right-3 glass-effect p-2 rounded-full">
-                    <Star className="w-5 h-5 text-yellow-400 fill-current" />
-                  </div>
-                )}
-              </motion.div>
+                  
+                  {/* Floating Status Badge */}
+                  {project.featured && (
+                    <div className="absolute -top-3 -right-3 glass-effect p-2 rounded-full">
+                      <IconComponent className="w-5 h-5 text-emerald-400" />
+                    </div>
+                  )}
+                </motion.div>
 
-              {/* Project Content */}
-              <div className={`space-y-6 ${
-                project.featured && index % 2 === 1 ? 'lg:col-start-1 lg:row-start-1' : ''
-              }`}>
-                <div className="space-y-4">
-                  <div className="flex items-center space-x-3">
-                    <h3 className="text-2xl lg:text-3xl font-bold text-white">
-                      {project.name}
-                    </h3>
-                    {project.featured && (
-                      <span className="px-3 py-1 text-xs font-semibold text-emerald-400 bg-emerald-400/10 rounded-full border border-emerald-400/20">
-                        Featured
-                      </span>
+                {/* Project Content */}
+                <div className={`space-y-6 ${
+                  project.featured && index % 2 === 1 ? 'lg:col-start-1 lg:row-start-1' : ''
+                }`}>
+                  <div className="space-y-4">
+                    <div className="flex items-center space-x-3">
+                      <h3 className="text-2xl lg:text-3xl font-bold text-white">
+                        {project.name}
+                      </h3>
+                      {project.featured && (
+                        <span className="px-3 py-1 text-xs font-semibold text-emerald-400 bg-emerald-400/10 rounded-full border border-emerald-400/20">
+                          Featured
+                        </span>
+                      )}
+                    </div>
+                    
+                    <p className="text-lg text-gray-300 leading-relaxed">
+                      {project.description}
+                    </p>
+
+                    {/* Metrics */}
+                    {project.metrics && (
+                      <div className="flex items-center space-x-2">
+                        <div className="w-2 h-2 bg-emerald-400 rounded-full"></div>
+                        <span className="text-sm font-semibold text-emerald-400">
+                          {project.metrics}
+                        </span>
+                      </div>
                     )}
                   </div>
-                  
-                  <p className="text-lg text-gray-300 leading-relaxed">
-                    {project.description}
-                  </p>
-                </div>
 
-                {/* Tech Stack */}
-                <div className="space-y-3">
-                  <h4 className="text-sm font-semibold text-gray-400 uppercase tracking-wider">
-                    Technologies Used
-                  </h4>
-                  <div className="flex flex-wrap gap-2">
-                    {project.tech.map((tech) => (
-                      <span
-                        key={tech}
-                        className="px-3 py-1 text-sm font-medium text-gray-300 bg-gray-800/50 rounded-full border border-gray-700"
+                  {/* Tech Stack */}
+                  <div className="space-y-3">
+                    <h4 className="text-sm font-semibold text-gray-400 uppercase tracking-wider">
+                      Technologies Used
+                    </h4>
+                    <div className="flex flex-wrap gap-2">
+                      {project.tech.map((tech) => (
+                        <span
+                          key={tech}
+                          className="px-3 py-1 text-sm font-medium text-gray-300 bg-gray-800/50 rounded-full border border-gray-700"
+                        >
+                          {tech}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* Action Buttons */}
+                  <div className="flex flex-col sm:flex-row gap-4 pt-4">
+                    {project.live !== "#" && (
+                      <motion.a
+                        href={project.live}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        whileHover={{ scale: 1.02 }}
+                        whileTap={{ scale: 0.98 }}
+                        className="flex items-center justify-center space-x-2 glass-effect hover-lift px-6 py-3 rounded-full font-semibold transition-all duration-300 hover:bg-white/10 group"
                       >
-                        {tech}
-                      </span>
-                    ))}
+                        <Globe size={20} />
+                        <span>Live Demo</span>
+                        <ArrowUpRight size={16} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+                      </motion.a>
+                    )}
+                    
+                    {project.github !== "#" && (
+                      <motion.a
+                        href={project.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        whileHover={{ scale: 1.02 }}
+                        whileTap={{ scale: 0.98 }}
+                        className="flex items-center justify-center space-x-2 border border-gray-600 hover:border-gray-400 px-6 py-3 rounded-full font-semibold transition-all duration-300 hover:bg-white/5 group"
+                      >
+                        <Code size={20} />
+                        <span>Source Code</span>
+                        <FaGithub className="group-hover:scale-110 transition-transform" />
+                      </motion.a>
+                    )}
                   </div>
                 </div>
-
-                {/* Action Buttons */}
-                <div className="flex flex-col sm:flex-row gap-4 pt-4">
-                  <motion.a
-                    href={project.live}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    whileHover={{ scale: 1.02 }}
-                    whileTap={{ scale: 0.98 }}
-                    className="flex items-center justify-center space-x-2 glass-effect hover-lift px-6 py-3 rounded-full font-semibold transition-all duration-300 hover:bg-white/10 group"
-                  >
-                    <Globe size={20} />
-                    <span>Live Demo</span>
-                    <ArrowUpRight size={16} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
-                  </motion.a>
-                  
-                  <motion.a
-                    href={project.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    whileHover={{ scale: 1.02 }}
-                    whileTap={{ scale: 0.98 }}
-                    className="flex items-center justify-center space-x-2 border border-gray-600 hover:border-gray-400 px-6 py-3 rounded-full font-semibold transition-all duration-300 hover:bg-white/5 group"
-                  >
-                    <Code size={20} />
-                    <span>Source Code</span>
-                    <FaGithub className="group-hover:scale-110 transition-transform" />
-                  </motion.a>
-                </div>
-              </div>
-            </motion.div>
-          ))}
+              </motion.div>
+            );
+          })}
         </div>
 
         {/* Call to Action */}

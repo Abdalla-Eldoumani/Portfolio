@@ -1,65 +1,89 @@
 "use client";
 
 import { motion } from 'framer-motion';
-import { FaReact, FaNodeJs, FaDocker, FaGitAlt, FaDatabase, FaPython, FaJava, FaCss3Alt, FaNpm } from 'react-icons/fa';
-import { SiTypescript, SiCplusplus, SiGnubash , SiNextdotjs, SiTailwindcss, SiMongodb, SiPostgresql, SiExpress, SiJunit5 , SiAssemblyscript, SiPytest, SiSupabase, SiFirebase, SiVercel } from 'react-icons/si';
+import { FaReact, FaNodeJs, FaDocker, FaGitAlt, FaDatabase, FaPython, FaJava, FaCss3Alt, FaNpm, FaAws } from 'react-icons/fa';
+import { SiTypescript, SiCplusplus, SiGnubash, SiNextdotjs, SiTailwindcss, SiMongodb, SiPostgresql, SiExpress, SiJunit5, SiAssemblyscript, SiPytest, SiSupabase, SiFirebase, SiVercel, SiSpring, SiFlask, SiDjango, SiKubernetes, SiMysql, SiOracle, SiPhp, SiCsharp, SiJupyter, SiPowerbi, SiMicrosoftazure, SiOpenai, SiTensorflow, SiPytorch, SiPostman, SiJira, SiKotlin, SiGo, SiApachekafka, SiJenkins, SiLinux } from 'react-icons/si';
 import { TbBrandDjango } from "react-icons/tb";
 
 const featuredSkills = [
+  { name: "C/C++", icon: SiCplusplus, level: "Expert", color: "text-blue-600" },
   { name: "TypeScript", icon: SiTypescript, level: "Expert", color: "text-blue-400" },
-  { name: "React.js", icon: FaReact, level: "Expert", color: "text-cyan-400" },
-  { name: "Next.js", icon: SiNextdotjs, level: "Expert", color: "text-white" },
-  { name: "Python", icon: FaPython, level: "Advanced", color: "text-yellow-400" },
+  { name: "Python", icon: FaPython, level: "Expert", color: "text-yellow-400" },
+  { name: "Java", icon: FaJava, level: "Advanced", color: "text-red-500" },
 ];
 
 const skillsData = [
   {
     category: "Languages",
     skills: [
-      { name: "TypeScript", icon: SiTypescript, color: "text-blue-400" },
       { name: "C/C++", icon: SiCplusplus, color: "text-blue-600" },
       { name: "Python", icon: FaPython, color: "text-yellow-400" },
       { name: "Java", icon: FaJava, color: "text-red-500" },
-      { name: "ARMv8 Assembly", icon: SiAssemblyscript, color: "text-gray-400" },
+      { name: "TypeScript", icon: SiTypescript, color: "text-blue-400" },
+      { name: "C#", icon: SiCsharp, color: "text-purple-500" },
+      { name: "Assembly", icon: SiAssemblyscript, color: "text-gray-400" },
+      { name: "PHP", icon: SiPhp, color: "text-indigo-500" },
       { name: "Bash", icon: SiGnubash, color: "text-green-400" },
-      { name: "CSS", icon: FaCss3Alt, color: "text-blue-500" },
+      { name: "Go", icon: SiGo, color: "text-cyan-400" },
+      { name: "Kotlin", icon: SiKotlin, color: "text-orange-500" },
     ],
   },
   {
-    category: "Frameworks",
+    category: "Frontend & Frameworks",
     skills: [
       { name: "React.js", icon: FaReact, color: "text-cyan-400" },
       { name: "Next.js", icon: SiNextdotjs, color: "text-white" },
-      { name: "Express.js", icon: SiExpress, color: "text-gray-300" },
       { name: "TailwindCSS", icon: SiTailwindcss, color: "text-teal-400" },
-      { name: "Django", icon: TbBrandDjango, color: "text-green-600" },
+      { name: "CSS3", icon: FaCss3Alt, color: "text-blue-500" },
+      { name: "Spring Boot", icon: SiSpring, color: "text-green-500" },
+      { name: "Express.js", icon: SiExpress, color: "text-gray-300" },
     ],
   },
   {
-    category: "Databases",
+    category: "Backend & Databases",
     skills: [
-      { name: "Supabase", icon: SiSupabase, color: "text-green-400" },
-      { name: "MongoDB", icon: SiMongodb, color: "text-green-500" },
-      { name: "SQL", icon: FaDatabase, color: "text-blue-400" },
+      { name: "Node.js", icon: FaNodeJs, color: "text-green-500" },
+      { name: "Django", icon: TbBrandDjango, color: "text-green-600" },
+      { name: "Flask", icon: SiFlask, color: "text-gray-300" },
       { name: "PostgreSQL", icon: SiPostgresql, color: "text-blue-600" },
+      { name: "MongoDB", icon: SiMongodb, color: "text-green-500" },
+      { name: "MySQL", icon: SiMysql, color: "text-blue-500" },
+      { name: "Oracle", icon: SiOracle, color: "text-red-600" },
+      { name: "Supabase", icon: SiSupabase, color: "text-green-400" },
       { name: "Firebase", icon: SiFirebase, color: "text-orange-400" },
     ],
   },
   {
-    category: "Testing",
+    category: "Data Science & AI/ML",
     skills: [
-      { name: "JUnit", icon: SiJunit5, color: "text-red-500" },
-      { name: "unittest", icon: SiPytest, color: "text-yellow-400" },
+      { name: "TensorFlow", icon: SiTensorflow, color: "text-orange-500" },
+      { name: "PyTorch", icon: SiPytorch, color: "text-red-500" },
+      { name: "Jupyter", icon: SiJupyter, color: "text-orange-400" },
+      { name: "Power BI", icon: SiPowerbi, color: "text-yellow-500" },
+      { name: "OpenAI API", icon: SiOpenai, color: "text-green-400" },
     ],
   },
   {
-    category: "Tools",
+    category: "Cloud & DevOps",
     skills: [
-      { name: "Shell", icon: SiGnubash, color: "text-green-400" },
-      { name: "Git", icon: FaGitAlt, color: "text-orange-500" },
+      { name: "AWS", icon: FaAws, color: "text-orange-400" },
+      { name: "Azure", icon: SiMicrosoftazure, color: "text-blue-500" },
       { name: "Docker", icon: FaDocker, color: "text-blue-500" },
+      { name: "Kubernetes", icon: SiKubernetes, color: "text-blue-600" },
       { name: "Vercel", icon: SiVercel, color: "text-white" },
-      { name: "npm", icon: FaNpm, color: "text-red-600" },
+      { name: "Jenkins", icon: SiJenkins, color: "text-blue-400" },
+      { name: "Linux", icon: SiLinux, color: "text-yellow-500" },
+    ],
+  },
+  {
+    category: "Testing & Tools",
+    skills: [
+      { name: "JUnit", icon: SiJunit5, color: "text-red-500" },
+      { name: "pytest", icon: SiPytest, color: "text-yellow-400" },
+      { name: "Git", icon: FaGitAlt, color: "text-orange-500" },
+      { name: "Postman", icon: SiPostman, color: "text-orange-500" },
+      { name: "Jira", icon: SiJira, color: "text-blue-500" },
+      { name: "Kafka", icon: SiApachekafka, color: "text-gray-300" },
     ],
   },
 ];
@@ -79,11 +103,12 @@ export const Skills = () => {
             Skills & <span className="text-gradient">Expertise</span>
           </h2>
           <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-            A comprehensive toolkit of modern technologies and frameworks I use to build exceptional digital experiences.
+            A comprehensive toolkit spanning low-level optimization, full-stack development, 
+            AI/ML, cybersecurity, and cloud technologies.
           </p>
         </motion.div>
 
-        {/* Featured Skills - Bento Grid Hero Section */}
+        {/* Featured Skills - Core Technologies */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -132,7 +157,7 @@ export const Skills = () => {
               viewport={{ once: true }}
               className={`bento-card hover-lift ${
                 category.category === 'Languages' ? 'lg:col-span-2' : 
-                category.category === 'Frameworks' ? 'lg:col-span-2' : ''
+                category.category === 'Backend & Databases' ? 'lg:col-span-2' : ''
               }`}
             >
               <div className="flex items-center mb-6">
@@ -170,10 +195,11 @@ export const Skills = () => {
           viewport={{ once: true }}
           className="mt-16 glass-effect p-8 rounded-2xl text-center"
         >
-          <h3 className="text-2xl font-bold mb-4 text-gradient">Continuous Learning</h3>
+          <h3 className="text-2xl font-bold mb-4 text-gradient">Performance & Innovation Focus</h3>
           <p className="text-gray-300 max-w-3xl mx-auto">
-            I&apos;m always exploring new technologies and expanding my skill set. Currently diving deeper into 
-            machine learning frameworks, cloud architecture, and advanced cybersecurity practices.
+            Specialized in high-performance computing, low-level optimization, and cutting-edge AI/ML technologies. 
+            Experienced in building scalable systems from embedded firmware to cloud-native microservices, 
+            with a strong foundation in cybersecurity and data engineering.
           </p>
         </motion.div>
       </div>
