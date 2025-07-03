@@ -49,6 +49,7 @@ const skillsData = [
       { name: "MySQL", icon: SiMysql, color: "text-blue-500" },
       { name: "Supabase", icon: SiSupabase, color: "text-green-400" },
       { name: "Firebase", icon: SiFirebase, color: "text-orange-400" },
+      { name: "Oracle", icon: SiOracle, color: "text-red-500" },
     ],
   },
   {
