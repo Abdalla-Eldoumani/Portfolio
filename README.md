@@ -2,7 +2,7 @@
 
 A modern, responsive portfolio website showcasing my journey as a Computer Science student. Built with Next.js 14, TypeScript, and Tailwind CSS, featuring smooth animations and a sleek glass-morphism design.
 
-🌟 **Live Demo:** [View Portfolio](your-portfolio-url-here)
+🌟 **Live Demo:** [View Portfolio](https://abdallaeldoumani.vercel.app/)
 
 ## About Me
 
@@ -137,7 +137,7 @@ This portfolio follows modern web design principles:
 
 ## 🤝 Connect With Me
 
-- **Portfolio**: [View Live Site](your-portfolio-url-here)
+- **Portfolio**: [View Live Site](https://abdallaeldoumani.vercel.app/)
 - **LinkedIn**: [Abdalla Eldoumani](https://www.linkedin.com/in/abdallaeldoumani/)
 - **GitHub**: [@Abdalla-Eldoumani](https://github.com/Abdalla-Eldoumani)
 - **Email**: [aamsdoumani@gmail.com](mailto:aamsdoumani@gmail.com)
