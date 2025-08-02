@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { FaReact, FaNodeJs, FaDocker, FaGitAlt, FaDatabase, FaPython, FaJava, FaCss3Alt, FaNpm, FaAws } from 'react-icons/fa';
-import { SiTypescript, SiCplusplus, SiGnubash, SiNextdotjs, SiTailwindcss, SiMongodb, SiPostgresql, SiExpress, SiJunit5, SiAssemblyscript, SiPytest, SiSupabase, SiFirebase, SiVercel, SiSpring, SiFlask, SiDjango, SiKubernetes, SiMysql, SiOracle, SiPhp, SiCsharp, SiJupyter, SiPowerbi, SiMicrosoftazure, SiOpenai, SiTensorflow, SiPytorch, SiPostman, SiJira, SiKotlin, SiGo, SiApachekafka, SiJenkins, SiLinux } from 'react-icons/si';
+import { SiTypescript, SiCplusplus, SiGnubash, SiNextdotjs, SiTailwindcss, SiMongodb, SiPostgresql, SiExpress, SiJunit5, SiAssemblyscript, SiPytest, SiSupabase, SiFirebase, SiVercel, SiSpring, SiFlask, SiDjango, SiKubernetes, SiMysql, SiOracle, SiPhp, SiCsharp, SiJupyter, SiPowerbi, SiMicrosoftazure, SiOpenai, SiTensorflow, SiPytorch, SiPostman, SiJira, SiKotlin, SiGo, SiApachekafka, SiJenkins, SiLinux, SiRust } from 'react-icons/si';
 import { TbBrandDjango } from "react-icons/tb";
 
 const featuredSkills = [
@@ -17,6 +17,7 @@ const skillsData = [
     category: "Languages",
     skills: [
       { name: "C/C++", icon: SiCplusplus, color: "text-blue-600" },
+      { name: "Rust", icon: SiRust, color: "text-orange-500" },
       { name: "Python", icon: FaPython, color: "text-yellow-400" },
       { name: "Java", icon: FaJava, color: "text-red-500" },
       { name: "TypeScript", icon: SiTypescript, color: "text-blue-400" },
