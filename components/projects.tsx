@@ -3,10 +3,22 @@
 
 import { motion } from 'framer-motion';
 import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
-import { ArrowUpRight, Code, Globe, Star, Zap, Shield, Calculator, ShoppingCart } from 'lucide-react';
+import { ArrowUpRight, Code, Globe, Star, Zap, Shield, Calculator, ShoppingCart, Server } from 'lucide-react';
 import Link from 'next/link';
 
 const projectsData = [
+  {
+    name: "Rust HTTP Server",
+    description: "Production-ready HTTP server handling 10,000+ concurrent requests with <10ms response time using Rust and Axum framework. Features comprehensive JWT authentication, role-based access control, and intelligent caching achieving 60% reduction in database queries.",
+    fullDescription: "Enterprise-grade HTTP server architected for high-performance concurrent processing with advanced search engine featuring full-text indexing and fuzzy matching. Includes asynchronous background job processing with retry mechanisms, WebSocket notifications, and comprehensive security features including rate limiting, CORS protection, and SQL injection prevention. Built with modular architecture featuring 15+ middleware components and real-time monitoring dashboards.",
+    image: "/images/rust-server.png",
+    github: "#",
+    live: "#",
+    tech: ["Rust", "Axum", "SQLite", "WebSocket", "JWT", "RESTful API", "Caching", "Rate Limiting"],
+    featured: true,
+    icon: Server,
+    metrics: "10,000+ concurrent requests, <10ms response time"
+  },
   {
     name: "FastMathExt",
     description: "High-performance C++ matrix multiplication library achieving 25-41% performance gains over NumPy through advanced optimization techniques including multi-level cache blocking, AVX2 SIMD instructions, and OpenMP parallelization.",
@@ -73,7 +85,7 @@ export const Projects = () => {
   return (
     <section className="py-20 bg-slate-950 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <motion.div
+    <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: "easeInOut" }}
@@ -82,7 +94,7 @@ export const Projects = () => {
         >
           <h2 className="text-4xl sm:text-5xl font-bold mb-4">
             Featured <span className="text-gradient">Projects</span>
-          </h2>
+      </h2>
           <p className="text-xl text-gray-400 max-w-3xl mx-auto">
             A showcase of innovative projects demonstrating expertise in performance optimization, 
             AI integration, cybersecurity, and full-stack development.
@@ -105,7 +117,7 @@ export const Projects = () => {
                 }`}
               >
                 {/* Project Image */}
-                <motion.div
+            <motion.div
                   whileHover={{ scale: 1.02 }}
                   className={`relative group ${
                     project.featured && index % 2 === 1 ? 'lg:col-start-2' : ''
@@ -113,14 +125,14 @@ export const Projects = () => {
                 >
                   <div className="glass-effect p-4 rounded-2xl overflow-hidden">
                     <div className="relative overflow-hidden rounded-xl">
-                      <img
-                        src={project.image}
-                        alt={project.name}
+              <img
+                src={project.image}
+                alt={project.name}
                         className="w-full h-64 lg:h-80 object-cover transition-transform duration-500 group-hover:scale-105"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                    </div>
-                  </div>
+              </div>
+            </div>
                   
                   {/* Floating Status Badge */}
                   {project.featured && (
@@ -159,7 +171,7 @@ export const Projects = () => {
                         </span>
                       </div>
                     )}
-                  </div>
+          </div>
 
                   {/* Tech Stack */}
                   <div className="space-y-3">
@@ -210,8 +222,8 @@ export const Projects = () => {
                       </motion.a>
                     )}
                   </div>
-                </div>
-              </motion.div>
+      </div>
+    </motion.div>
             );
           })}
         </div>
