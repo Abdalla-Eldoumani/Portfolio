@@ -12,7 +12,7 @@ const projectsData = [
     description: "Production-ready HTTP server handling 10,000+ concurrent requests with <10ms response time using Rust and Axum framework. Features comprehensive JWT authentication, role-based access control, and intelligent caching achieving 60% reduction in database queries.",
     fullDescription: "Enterprise-grade HTTP server architected for high-performance concurrent processing with advanced search engine featuring full-text indexing and fuzzy matching. Includes asynchronous background job processing with retry mechanisms, WebSocket notifications, and comprehensive security features including rate limiting, CORS protection, and SQL injection prevention. Built with modular architecture featuring 15+ middleware components and real-time monitoring dashboards.",
     image: "/images/rust-server.png",
-    github: "#",
+    github: "https://github.com/Abdalla-Eldoumani/rust-http-server",
     live: "#",
     tech: ["Rust", "Axum", "SQLite", "WebSocket", "JWT", "RESTful API", "Caching", "Rate Limiting"],
     featured: true,
