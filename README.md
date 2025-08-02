@@ -37,6 +37,11 @@ I'm a Computer Science student at the University of Calgary with a passion for h
 
 ## 🚀 Featured Projects
 
+### Rust HTTP Server
+Production-ready HTTP server handling **10,000+ concurrent requests** with <10ms response time.
+- **Tech:** Rust, Axum, SQLite, WebSocket, JWT Authentication
+- **Performance:** 60% reduction in database queries, sub-100ms search responses
+
 ### FastMathExt
 High-performance C++ matrix multiplication library achieving **25-41% performance gains** over NumPy through advanced optimization techniques.
 - **Tech:** C++, OpenMP, AVX2 SIMD, Multi-level Cache Blocking
