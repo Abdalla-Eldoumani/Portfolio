@@ -1,0 +1,116 @@
+<svg width="400" height="300" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="rustGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#CE422B"/>
+      <stop offset="100%" stop-color="#8B0000"/>
+    </linearGradient>
+    <linearGradient id="serverGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2D3748"/>
+      <stop offset="100%" stop-color="#1A202C"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="50%" r="60%">
+      <stop offset="0%" stop-color="#10B981" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#10B981" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="400" height="300" fill="#0F1419"/>
+  <ellipse cx="200" cy="250" rx="120" ry="25" fill="url(#glow)" opacity="0.3"/>
+
+  <g>
+    <rect x="50" y="40" width="300" height="220" rx="16" fill="url(#serverGradient)" stroke="#4A5568" stroke-width="2"/>
+    <g>
+      <rect x="70" y="65" width="260" height="32" rx="6" fill="#232634" stroke="#4A5568" stroke-width="1"/>
+      <rect x="70" y="110" width="260" height="32" rx="6" fill="#232634" stroke="#4A5568" stroke-width="1"/>
+      <rect x="70" y="155" width="260" height="32" rx="6" fill="#232634" stroke="#4A5568" stroke-width="1"/>
+      <rect x="70" y="200" width="260" height="32" rx="6" fill="#232634" stroke="#4A5568" stroke-width="1"/>
+    </g>
+    <g>
+      <circle cx="90" cy="81" r="4" fill="#10B981"/>
+      <circle cx="105" cy="81" r="4" fill="#10B981"/>
+      <circle cx="120" cy="81" r="4" fill="#F59E0B"/>
+      <rect x="150" y="75" width="120" height="6" rx="3" fill="#2D3748"/>
+      <rect x="150" y="75" width="100" height="6" rx="3" fill="#10B981"/>
+      <circle cx="90" cy="126" r="4" fill="#10B981"/>
+      <circle cx="105" cy="126" r="4" fill="#10B981"/>
+      <circle cx="120" cy="126" r="4" fill="#10B981"/>
+      <rect x="150" y="120" width="120" height="6" rx="3" fill="#2D3748"/>
+      <rect x="150" y="120" width="110" height="6" rx="3" fill="#10B981"/>
+      <circle cx="90" cy="171" r="4" fill="#10B981"/>
+      <circle cx="105" cy="171" r="4" fill="#EF4444"/>
+      <circle cx="120" cy="171" r="4" fill="#10B981"/>
+      <rect x="150" y="165" width="120" height="6" rx="3" fill="#2D3748"/>
+      <rect x="150" y="165" width="70" height="6" rx="3" fill="#F59E0B"/>
+      <circle cx="90" cy="216" r="4" fill="#10B981"/>
+      <circle cx="105" cy="216" r="4" fill="#10B981"/>
+      <circle cx="120" cy="216" r="4" fill="#10B981"/>
+      <rect x="150" y="210" width="120" height="6" rx="3" fill="#2D3748"/>
+      <rect x="150" y="210" width="105" height="6" rx="3" fill="#10B981"/>
+    </g>
+    <g transform="translate(285, 60)">
+      <circle cx="20" cy="20" r="16" fill="url(#rustGradient)" stroke="#8B0000" stroke-width="2"/>
+      <g>
+        <circle cx="20" cy="20" r="10" fill="none" stroke="#fff" stroke-width="2"/>
+        <g>
+          <rect x="19" y="6" width="2" height="6" rx="1" fill="#fff" transform="rotate(0 20 20)"/>
+          <rect x="19" y="28" width="2" height="6" rx="1" fill="#fff" transform="rotate(180 20 20)"/>
+          <rect x="28" y="19" width="6" height="2" rx="1" fill="#fff" transform="rotate(90 20 20)"/>
+          <rect x="6" y="19" width="6" height="2" rx="1" fill="#fff" transform="rotate(-90 20 20)"/>
+        </g>
+        <circle cx="20" cy="20" r="4" fill="#fff"/>
+      </g>
+      <text x="20" y="25" text-anchor="middle" fill="#8B0000" font-family="monospace" font-size="14" font-weight="bold">R</text>
+    </g>
+    <g>
+      <rect x="320" y="200" width="32" height="32" rx="8" fill="#232634" stroke="#10B981" stroke-width="2"/>
+      <g>
+        <rect x="332" y="215" width="8" height="8" rx="2" fill="#10B981"/>
+        <rect x="334" y="211" width="4" height="6" rx="2" fill="#10B981"/>
+      </g>
+    </g>
+    <g>
+      <rect x="320" y="70" width="32" height="32" rx="8" fill="#232634" stroke="#3B82F6" stroke-width="2"/>
+      <path d="M332 86 Q336 80 340 86" stroke="#3B82F6" stroke-width="2" fill="none"/>
+      <path d="M332 90 Q336 84 340 90" stroke="#3B82F6" stroke-width="2" fill="none"/>
+    </g>
+    <g>
+      <rect x="320" y="135" width="32" height="32" rx="8" fill="#232634" stroke="#F59E0B" stroke-width="2"/>
+      <ellipse cx="336" cy="143" rx="8" ry="4" fill="#F59E0B" opacity="0.7"/>
+      <rect x="328" y="143" width="16" height="14" rx="4" fill="#F59E0B" opacity="0.7"/>
+      <ellipse cx="336" cy="157" rx="8" ry="4" fill="#F59E0B"/>
+    </g>
+    <g>
+      <rect x="48" y="200" width="32" height="32" rx="8" fill="#232634" stroke="#EF4444" stroke-width="2"/>
+      <path d="M64 210 l8 4 l-8 8 l-8-8 l8-4" fill="#EF4444" opacity="0.7"/>
+      <path d="M64 210 v8" stroke="#fff" stroke-width="2"/>
+    </g>
+    <g>
+      <rect x="48" y="70" width="32" height="32" rx="8" fill="#232634" stroke="#F59E0B" stroke-width="2"/>
+      <polygon points="64,78 68,86 62,86 66,94" fill="#F59E0B"/>
+    </g>
+  </g>
+
+  <g>
+    <path d="M30 100 Q10 150 30 200" stroke="#3B82F6" stroke-width="2" fill="none" opacity="0.6"/>
+    <path d="M370 100 Q390 150 370 200" stroke="#3B82F6" stroke-width="2" fill="none" opacity="0.6"/>
+    <circle cx="30" cy="150" r="3" fill="#3B82F6" opacity="0.8">
+      <animate attributeName="cy" values="100;200;100" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="370" cy="150" r="3" fill="#10B981" opacity="0.8">
+      <animate attributeName="cy" values="200;100;200" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    <g>
+      <rect x="10" y="90" width="20" height="20" rx="5" fill="#232634" stroke="#3B82F6" stroke-width="2"/>
+      <rect x="10" y="190" width="20" height="20" rx="5" fill="#232634" stroke="#3B82F6" stroke-width="2"/>
+      <rect x="370" y="90" width="20" height="20" rx="5" fill="#232634" stroke="#10B981" stroke-width="2"/>
+      <rect x="370" y="190" width="20" height="20" rx="5" fill="#232634" stroke="#10B981" stroke-width="2"/>
+      <circle cx="20" cy="100" r="3" fill="#3B82F6"/>
+      <circle cx="20" cy="200" r="3" fill="#3B82F6"/>
+      <circle cx="380" cy="100" r="3" fill="#10B981"/>
+      <circle cx="380" cy="200" r="3" fill="#10B981"/>
+    </g>
+  </g>
+
+  <text x="200" y="32" text-anchor="middle" fill="#E2E8F0" font-family="monospace" font-size="18" font-weight="bold">Rust HTTP Server</text>
+  <text x="200" y="295" text-anchor="middle" fill="#A0AEC0" font-family="monospace" font-size="13">10,000+ concurrent | &lt;10ms response</text>
+</svg>
