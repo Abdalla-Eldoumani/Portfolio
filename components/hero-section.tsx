@@ -58,7 +58,6 @@ export const HeroSection = () => {
                   words={[
                     'Full Stack Developer',
                     'AI/ML Enthusiast',
-                    'Cybersecurity Expert',
                     'Problem Solver'
                   ]}
                   loop={true}
