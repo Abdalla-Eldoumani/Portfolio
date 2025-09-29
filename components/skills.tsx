@@ -105,7 +105,7 @@ export const Skills = () => {
           </p>
         </motion.div>
 
-        {/* Featured Skills - Core Technologies */}
+        {/* Featured Skills - Core Technologies with Progress */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -113,27 +113,51 @@ export const Skills = () => {
           viewport={{ once: false, amount: 0.2 }}
           className="mb-16"
         >
-          <h3 className="text-2xl font-semibold mb-8 text-center text-gray-300">Core Technologies</h3>
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
-            {featuredSkills.map((skill, index) => (
-                              <motion.div
+          <h3 className="text-2xl font-semibold mb-8 text-center" style={{ color: 'var(--text-secondary)', letterSpacing: '-0.02em' }}>Core Technologies</h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {featuredSkills.map((skill, index) => {
+              const proficiency = skill.level === "Expert" ? 95 : 85;
+              return (
+                <motion.div
                   key={skill.name}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1, ease: "easeInOut" }}
-                  whileHover={{ scale: 1.05, rotate: 1 }}
                   viewport={{ once: false, amount: 0.3 }}
-                  className="glass-effect p-8 rounded-2xl text-center hover-lift group"
+                  className="skill-card glass-effect p-6 rounded-xl hover-lift group"
+                  whileHover={{ y: -4 }}
                 >
-                <div className="mb-4 flex justify-center">
-                  <skill.icon className={`text-5xl ${skill.color} group-hover:scale-110 transition-transform duration-300`} />
-                </div>
-                <h4 className="text-lg font-semibold mb-2">{skill.name}</h4>
-                <span className="text-sm text-gray-400 px-3 py-1 rounded-full bg-gray-800/50">
-                  {skill.level}
-                </span>
-              </motion.div>
-            ))}
+                  <div className="mb-4 flex justify-center">
+                    <motion.div
+                      whileHover={{ scale: 1.1, rotate: 5 }}
+                      transition={{ type: "spring", stiffness: 300 }}
+                    >
+                      <skill.icon className={`text-5xl ${skill.color}`} />
+                    </motion.div>
+                  </div>
+                  <h4 className="text-lg font-semibold mb-3 text-center" style={{ letterSpacing: '-0.02em' }}>
+                    {skill.name}
+                  </h4>
+                  <div className="space-y-2">
+                    <div className="flex justify-between items-center text-xs">
+                      <span style={{ color: 'var(--text-muted)' }}>Proficiency</span>
+                      <span className="numeric-tabular font-semibold" style={{ color: 'var(--accent-primary)' }}>
+                        {proficiency}%
+                      </span>
+                    </div>
+                    <div className="progress-bar">
+                      <motion.div
+                        className="progress-fill"
+                        initial={{ width: 0 }}
+                        whileInView={{ width: `${proficiency}%` }}
+                        transition={{ duration: 1.5, delay: index * 0.1 + 0.3, ease: [0.4, 0, 0.2, 1] }}
+                        viewport={{ once: false, amount: 0.3 }}
+                      />
+                    </div>
+                  </div>
+                </motion.div>
+              );
+            })}
           </div>
         </motion.div>
 
