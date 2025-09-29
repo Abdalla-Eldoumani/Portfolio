@@ -1,10 +1,10 @@
-/* eslint-disable @next/next/no-img-element */
 "use client";
 
 import { motion } from 'framer-motion';
 import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
 import { ArrowUpRight, Code, Globe, Star, Zap, Shield, Calculator, ShoppingCart, Server } from 'lucide-react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 const projectsData = [
   {
@@ -124,11 +124,14 @@ export const Projects = () => {
                   }`}
                 >
                   <div className="glass-effect p-4 rounded-2xl overflow-hidden">
-                    <div className="relative overflow-hidden rounded-xl">
-              <img
+                    <div className="relative overflow-hidden rounded-xl h-64 lg:h-80">
+              <Image
                 src={project.image}
                 alt={project.name}
-                        className="w-full h-64 lg:h-80 object-cover transition-transform duration-500 group-hover:scale-105"
+                        fill
+                        className="object-cover transition-transform duration-500 group-hover:scale-105"
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
+                        priority={index < 2}
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </div>
