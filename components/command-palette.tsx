@@ -155,6 +155,21 @@ export const CommandPalette = () => {
     setSelectedIndex(0);
   }, [search]);
 
+  // Prevent body scroll when palette is open
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = 'hidden';
+      document.body.style.paddingRight = 'var(--scrollbar-width, 0px)';
+    } else {
+      document.body.style.overflow = '';
+      document.body.style.paddingRight = '';
+    }
+    return () => {
+      document.body.style.overflow = '';
+      document.body.style.paddingRight = '';
+    };
+  }, [isOpen]);
+
   // Hint to show command palette exists
   const [showHint, setShowHint] = useState(true);
 
@@ -173,15 +188,15 @@ export const CommandPalette = () => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 20 }}
             transition={{ duration: 0.3, delay: 2 }}
-            className="fixed bottom-6 right-6 z-50"
+            className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-50"
           >
             <button
               onClick={() => setIsOpen(true)}
-              className="glass-effect px-4 py-2 rounded-full text-sm font-medium text-gray-300 hover:text-white transition-all duration-300 flex items-center gap-2 hover-lift"
+              className="glass-effect px-3 py-2 sm:px-4 sm:py-2 rounded-full text-xs sm:text-sm font-medium text-gray-300 hover:text-white transition-all duration-300 flex items-center gap-2 hover-lift shadow-lg"
             >
-              <Command size={14} />
+              <Command size={14} className="flex-shrink-0" />
               <span className="hidden sm:inline">Press</span>
-              <kbd className="command-kbd">⌘K</kbd>
+              <kbd className="command-kbd text-xs">⌘K</kbd>
             </button>
           </motion.div>
         )}
@@ -255,20 +270,20 @@ export const CommandPalette = () => {
               </div>
 
               {/* Footer */}
-              <div className="border-t border-gray-800 px-4 py-3 flex items-center justify-between text-xs text-gray-400">
-                <div className="flex items-center gap-4">
+              <div className="border-t border-gray-800 px-4 py-3 flex items-center justify-between text-xs text-gray-400 flex-shrink-0">
+                <div className="flex items-center gap-2 sm:gap-4">
                   <span className="flex items-center gap-1">
                     <kbd className="command-kbd text-xs">↑↓</kbd>
-                    Navigate
+                    <span className="hidden xs:inline">Navigate</span>
                   </span>
                   <span className="flex items-center gap-1">
                     <kbd className="command-kbd text-xs">↵</kbd>
-                    Select
+                    <span className="hidden xs:inline">Select</span>
                   </span>
                 </div>
                 <span className="flex items-center gap-1">
                   <kbd className="command-kbd text-xs">Esc</kbd>
-                  Close
+                  <span className="hidden xs:inline">Close</span>
                 </span>
               </div>
             </motion.div>
