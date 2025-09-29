@@ -128,22 +128,24 @@ export const HeroSection = () => {
           >
             <div className="relative">
               <div className="glass-effect p-2 rounded-full">
-                <Image
-                  src="/images/abdalla.jpg"
-                  alt="Abdalla Eldoumani"
-                  width={400}
-                  height={400}
-                  className="rounded-full object-cover"
-                  priority
-                  quality={95}
-                />
+                <div className="relative w-[300px] h-[300px] md:w-[400px] md:h-[400px]">
+                  <Image
+                    src="/images/abdalla.jpg"
+                    alt="Abdalla Eldoumani"
+                    fill
+                    className="rounded-full object-cover"
+                    priority
+                    quality={95}
+                    sizes="(max-width: 768px) 300px, 400px"
+                  />
+                </div>
               </div>
               {/* Floating elements */}
               <div className="absolute -top-4 -right-4 glass-effect p-3 rounded-full">
-                <div className="w-4 h-4 bg-green-500 rounded-full animate-pulse"></div>
+                <div className="w-4 h-4 rounded-full animate-pulse" style={{ backgroundColor: 'var(--accent-tertiary)' }}></div>
               </div>
               <div className="absolute -bottom-4 -left-4 glass-effect p-2 rounded-lg">
-                <span className="text-sm font-semibold text-gray-300">👋 Available for work</span>
+                <span className="text-sm font-semibold" style={{ color: 'var(--text-secondary)' }}>👋 Available for work</span>
               </div>
             </div>
           </motion.div>
