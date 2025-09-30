@@ -345,11 +345,14 @@ a:focus-visible {
 /* Command Palette - Signature Feature */
 .command-palette {
   position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
   width: calc(100vw - 2rem);
   max-width: 640px;
+  height: fit-content;
   max-height: calc(100vh - 2rem);
   background: var(--glass-bg);
   backdrop-filter: blur(32px) saturate(180%);
