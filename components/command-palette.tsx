@@ -170,13 +170,13 @@ export const CommandPalette = () => {
     };
   }, [isOpen]);
 
-  // Hint to show command palette exists
   const [showHint, setShowHint] = useState(true);
 
   useEffect(() => {
-    const timer = setTimeout(() => setShowHint(false), 8000);
-    return () => clearTimeout(timer);
-  }, []);
+    if (isOpen) {
+      setShowHint(false);
+    }
+  }, [isOpen]);
 
   return (
     <>
