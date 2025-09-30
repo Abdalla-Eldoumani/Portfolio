@@ -170,24 +170,19 @@ export const CommandPalette = () => {
     };
   }, [isOpen]);
 
-  const [showHint, setShowHint] = useState(true);
-
-  useEffect(() => {
-    if (isOpen) {
-      setShowHint(false);
-    }
-  }, [isOpen]);
+  // Keep hint button always visible
+  const [showHint] = useState(true);
 
   return (
     <>
-      {/* Hint Badge */}
+      {/* Hint Badge - Always visible */}
       <AnimatePresence>
         {showHint && !isOpen && (
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: 20 }}
-            transition={{ duration: 0.3, delay: 2 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.2 }}
             className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-50"
           >
             <button
@@ -229,10 +224,10 @@ export const CommandPalette = () => {
             >
               {/* Search Input */}
               <div className="relative">
-                <Search className="absolute left-5 top-1/2 transform -translate-y-1/2 text-gray-400" size={20} />
+                <Search className="absolute left-5 top-1/2 transform -translate-y-1/2 text-gray-400 pointer-events-none" size={20} />
                 <input
                   type="text"
-                  className="command-input pl-14"
+                  className="command-input"
                   placeholder="Type a command or search..."
                   value={search}
                   onChange={(e) => setSearch(e.target.value)}
