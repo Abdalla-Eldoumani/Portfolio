@@ -6,10 +6,10 @@ import { SiTypescript, SiCplusplus, SiGnubash, SiNextdotjs, SiTailwindcss, SiMon
 import { TbBrandDjango } from "react-icons/tb";
 
 const featuredSkills = [
-  { name: "C/C++", icon: SiCplusplus, level: "Expert", color: "text-blue-600" },
-  { name: "TypeScript", icon: SiTypescript, level: "Expert", color: "text-blue-400" },
-  { name: "Python", icon: FaPython, level: "Expert", color: "text-yellow-400" },
-  { name: "Java", icon: FaJava, level: "Advanced", color: "text-red-500" },
+  { name: "C/C++", icon: SiCplusplus, level: "Proficient", proficiency: 85, color: "text-blue-600" },
+  { name: "TypeScript", icon: SiTypescript, level: "Proficient", proficiency: 80, color: "text-blue-400" },
+  { name: "Python", icon: FaPython, level: "Proficient", proficiency: 82, color: "text-yellow-400" },
+  { name: "Java", icon: FaJava, level: "Proficient", proficiency: 75, color: "text-red-500" },
 ];
 
 const skillsData = [
@@ -116,7 +116,7 @@ export const Skills = () => {
           <h3 className="text-2xl font-semibold mb-8 text-center" style={{ color: 'var(--text-secondary)', letterSpacing: '-0.02em' }}>Core Technologies</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {featuredSkills.map((skill, index) => {
-              const proficiency = skill.level === "Expert" ? 95 : 85;
+              const proficiency = skill.proficiency;
               return (
                 <motion.div
                   key={skill.name}
