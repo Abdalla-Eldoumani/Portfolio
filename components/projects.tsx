@@ -5,6 +5,8 @@ import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
 import { ArrowUpRight, Code, Globe, Star, Zap, Shield, Calculator, ShoppingCart, Server } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { BlurImage } from '@/components/ui/blur-image';
+import { PerformanceBadge } from '@/components/ui/performance-badge';
 
 const projectsData = [
   {
@@ -118,30 +120,41 @@ export const Projects = () => {
               >
                 {/* Project Image */}
             <motion.div
-                  whileHover={{ scale: 1.02 }}
+                  whileHover={{ scale: 1.01 }}
                   className={`relative group ${
                     project.featured && index % 2 === 1 ? 'lg:col-start-2' : ''
                   }`}
                 >
-                  <div className="glass-effect p-4 rounded-2xl overflow-hidden">
+                  <div className="glass-effect p-4 rounded-2xl overflow-hidden hover-lift">
                     <div className="relative overflow-hidden rounded-xl h-64 lg:h-80">
-              <Image
+              <BlurImage
                 src={project.image}
                 alt={project.name}
                         fill
-                        className="object-cover transition-transform duration-500 group-hover:scale-105"
+                        className="object-cover transition-all duration-700 ease-out group-hover:scale-105"
                         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
                         priority={index < 2}
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+
+                      {/* Overlay Performance Badge */}
+                      {project.metrics && (
+                        <div className="absolute bottom-4 left-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                          <PerformanceBadge metric={project.metrics} icon="zap" />
+                        </div>
+                      )}
               </div>
             </div>
-                  
+
                   {/* Floating Status Badge */}
                   {project.featured && (
-                    <div className="absolute -top-3 -right-3 glass-effect p-2 rounded-full">
+                    <motion.div
+                      className="absolute -top-3 -right-3 glass-effect p-2 rounded-full"
+                      whileHover={{ scale: 1.1, rotate: 5 }}
+                      transition={{ type: "spring", stiffness: 400 }}
+                    >
                       <IconComponent className="w-5 h-5 text-emerald-400" />
-                    </div>
+                    </motion.div>
                   )}
                 </motion.div>
 
@@ -167,11 +180,8 @@ export const Projects = () => {
 
                     {/* Metrics */}
                     {project.metrics && (
-                      <div className="flex items-center space-x-2">
-                        <div className="w-2 h-2 bg-emerald-400 rounded-full"></div>
-                        <span className="text-sm font-semibold text-emerald-400">
-                          {project.metrics}
-                        </span>
+                      <div className="flex items-center gap-3 flex-wrap">
+                        <PerformanceBadge metric={project.metrics} icon="trending" delay={0.2} />
                       </div>
                     )}
           </div>
@@ -182,13 +192,22 @@ export const Projects = () => {
                       Technologies Used
                     </h4>
                     <div className="flex flex-wrap gap-2">
-                      {project.tech.map((tech) => (
-                        <span
+                      {project.tech.map((tech, techIndex) => (
+                        <motion.span
                           key={tech}
-                          className="px-3 py-1 text-sm font-medium text-gray-300 bg-gray-800/50 rounded-full border border-gray-700"
+                          initial={{ opacity: 0, scale: 0.8 }}
+                          whileInView={{ opacity: 1, scale: 1 }}
+                          viewport={{ once: true }}
+                          transition={{
+                            duration: 0.3,
+                            delay: techIndex * 0.05,
+                            ease: [0.34, 1.56, 0.64, 1]
+                          }}
+                          whileHover={{ scale: 1.05, y: -2 }}
+                          className="px-3 py-1.5 text-sm font-medium text-gray-300 bg-gray-800/50 rounded-full border border-gray-700 hover:border-gray-600 hover:bg-gray-800/70 transition-all cursor-default"
                         >
                           {tech}
-                        </span>
+                        </motion.span>
                       ))}
                     </div>
                   </div>
