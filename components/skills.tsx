@@ -4,12 +4,21 @@ import { motion } from 'framer-motion';
 import { FaReact, FaNodeJs, FaDocker, FaGitAlt, FaDatabase, FaPython, FaJava, FaCss3Alt, FaNpm, FaAws } from 'react-icons/fa';
 import { SiTypescript, SiCplusplus, SiGnubash, SiNextdotjs, SiTailwindcss, SiMongodb, SiPostgresql, SiExpress, SiJunit5, SiAssemblyscript, SiPytest, SiSupabase, SiFirebase, SiVercel, SiSpring, SiFlask, SiDjango, SiKubernetes, SiMysql, SiOracle, SiPhp, SiCsharp, SiJupyter, SiPowerbi, SiMicrosoftazure, SiOpenai, SiTensorflow, SiPytorch, SiPostman, SiJira, SiKotlin, SiGo, SiApachekafka, SiJenkins, SiLinux, SiRust } from 'react-icons/si';
 import { TbBrandDjango } from "react-icons/tb";
+import { SkillConstellation } from '@/components/ui/skill-constellation';
 
 const featuredSkills = [
-  { name: "C/C++", icon: SiCplusplus, level: "Proficient", proficiency: 85, color: "text-blue-600" },
-  { name: "TypeScript", icon: SiTypescript, level: "Proficient", proficiency: 80, color: "text-blue-400" },
-  { name: "Python", icon: FaPython, level: "Proficient", proficiency: 82, color: "text-yellow-400" },
-  { name: "Java", icon: FaJava, level: "Proficient", proficiency: 75, color: "text-red-500" },
+  { name: "C/C++", icon: SiCplusplus, level: "Proficient", proficiency: 85, color: "text-blue-600", category: "Languages" },
+  { name: "TypeScript", icon: SiTypescript, level: "Proficient", proficiency: 80, color: "text-blue-400", category: "Languages" },
+  { name: "Python", icon: FaPython, level: "Proficient", proficiency: 82, color: "text-yellow-400", category: "Languages" },
+  { name: "Java", icon: FaJava, level: "Proficient", proficiency: 75, color: "text-red-500", category: "Languages" },
+  { name: "Rust", icon: SiRust, level: "Advanced", proficiency: 78, color: "text-orange-500", category: "Languages" },
+  { name: "React.js", icon: FaReact, level: "Proficient", proficiency: 83, color: "text-cyan-400", category: "Frontend" },
+  { name: "Next.js", icon: SiNextdotjs, level: "Proficient", proficiency: 81, color: "text-white", category: "Frontend" },
+  { name: "Node.js", icon: FaNodeJs, level: "Proficient", proficiency: 79, color: "text-green-500", category: "Backend" },
+  { name: "PostgreSQL", icon: SiPostgresql, level: "Proficient", proficiency: 77, color: "text-blue-600", category: "Database" },
+  { name: "Docker", icon: FaDocker, level: "Intermediate", proficiency: 72, color: "text-blue-500", category: "DevOps" },
+  { name: "AWS", icon: FaAws, level: "Intermediate", proficiency: 70, color: "text-orange-400", category: "Cloud" },
+  { name: "TensorFlow", icon: SiTensorflow, level: "Intermediate", proficiency: 68, color: "text-orange-500", category: "AI/ML" },
 ];
 
 const skillsData = [
@@ -105,7 +114,7 @@ export const Skills = () => {
           </p>
         </motion.div>
 
-        {/* Featured Skills - Core Technologies with Progress */}
+        {/* Interactive Skill Constellation - Signature Feature */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -113,52 +122,15 @@ export const Skills = () => {
           viewport={{ once: false, amount: 0.2 }}
           className="mb-16"
         >
-          <h3 className="text-2xl font-semibold mb-8 text-center" style={{ color: 'var(--text-secondary)', letterSpacing: '-0.02em' }}>Core Technologies</h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {featuredSkills.map((skill, index) => {
-              const proficiency = skill.proficiency;
-              return (
-                <motion.div
-                  key={skill.name}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1, ease: "easeInOut" }}
-                  viewport={{ once: false, amount: 0.3 }}
-                  className="skill-card glass-effect p-6 rounded-xl hover-lift group"
-                  whileHover={{ y: -4 }}
-                >
-                  <div className="mb-4 flex justify-center">
-                    <motion.div
-                      whileHover={{ scale: 1.1, rotate: 5 }}
-                      transition={{ type: "spring", stiffness: 300 }}
-                    >
-                      <skill.icon className={`text-5xl ${skill.color}`} />
-                    </motion.div>
-                  </div>
-                  <h4 className="text-lg font-semibold mb-3 text-center" style={{ letterSpacing: '-0.02em' }}>
-                    {skill.name}
-                  </h4>
-                  <div className="space-y-2">
-                    <div className="flex justify-between items-center text-xs">
-                      <span style={{ color: 'var(--text-muted)' }}>Proficiency</span>
-                      <span className="numeric-tabular font-semibold" style={{ color: 'var(--accent-primary)' }}>
-                        {proficiency}%
-                      </span>
-                    </div>
-                    <div className="progress-bar">
-                      <motion.div
-                        className="progress-fill"
-                        initial={{ width: 0 }}
-                        whileInView={{ width: `${proficiency}%` }}
-                        transition={{ duration: 1.5, delay: index * 0.1 + 0.3, ease: [0.4, 0, 0.2, 1] }}
-                        viewport={{ once: false, amount: 0.3 }}
-                      />
-                    </div>
-                  </div>
-                </motion.div>
-              );
-            })}
+          <div className="mb-8 text-center">
+            <h3 className="text-2xl font-semibold mb-3" style={{ color: 'var(--text-secondary)', letterSpacing: '-0.02em' }}>
+              Interactive Skills Ecosystem
+            </h3>
+            <p className="text-sm text-gray-400 max-w-2xl mx-auto">
+              Hover over skills to explore connections. Size reflects proficiency level.
+            </p>
           </div>
+          <SkillConstellation skills={featuredSkills} />
         </motion.div>
 
         {/* Skills Categories - Bento Grid Layout */}
