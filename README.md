@@ -12,20 +12,29 @@ I'm a Computer Science student at the University of Calgary specializing in high
 
 ### 🎯 Signature Interactions
 - **⌘K Command Palette**: Professional keyboard-first navigation with fuzzy search
-- **Refined Micro-interactions**: Spring physics animations and meaningful hover states
-- **Progressive Skill Visualization**: Animated progress bars with tabular numeric displays
+- **Interactive Skills Constellation**: Force-directed graph visualization with proficiency-based sizing and dynamic connections
+- **Refined Micro-interactions**: Spring physics animations (cubic-bezier 0.34, 1.56, 0.64, 1) with purposeful feedback
+- **Performance Badges**: Animated metric displays showcasing technical achievements
 
 ### 🎨 Visual Excellence
 - **Swiss Design Meets Modern Web**: Deliberate color palette beyond typical dark themes
-- **Optical Typography**: Letter-spacing adjustments, font features, and text balancing
+- **Advanced Typography System**:
+  - Fluid sizing with `clamp()` functions (2.5rem - 4.5rem for h1)
+  - Optical letter-spacing (-0.04em to -0.01em based on hierarchy)
+  - OpenType features: kerning, ligatures, contextual alternates, tabular figures
+  - Text wrapping optimization: `text-wrap: balance` for headings, `pretty` for paragraphs
 - **Refined Glassmorphism**: Functional backdrop blur with elevated shadows
+- **Enhanced Card System**: Top-border gradient reveals and elevation on hover
 - **Custom Selection Colors**: Brand-consistent text selection and focus states
 
 ### ⚡ Performance Optimized
-- **Next.js Image Optimization**: AVIF/WebP support with responsive sizing
-- **Bundle Optimization**: Strategic package imports, 178 kB First Load JS
+- **Progressive Image Loading**: Blur-up effect with 700ms transitions
+- **GPU Acceleration**: `transform: translateZ(0)`, `backface-visibility: hidden`, perspective optimization
+- **IntersectionObserver**: Custom hooks for scroll-triggered animations (replacing AOS)
+- **Conditional Will-Change**: Applied only during active interactions for optimal performance
+- **Bundle Optimization**: Strategic package imports, 186 kB First Load JS
 - **Production Ready**: Zero TypeScript errors, clean static generation
-- **Accessibility First**: WCAG compliant with refined focus-visible states
+- **Accessibility First**: WCAG compliant with refined focus-visible states and reduced motion support
 
 ## 🛠️ Technologies Used
 
@@ -79,18 +88,25 @@ Multi-model AI platform integrating OpenAI's latest models with modern web techn
 portfolio_website/
 ├── app/                    # Next.js App Router
 │   ├── resume/            # Resume page
-│   ├── globals.css        # Design system with CSS variables
+│   ├── globals.css        # Design system with CSS variables & advanced animations
 │   ├── layout.tsx         # Root layout with metadata
 │   └── page.tsx          # Homepage composition
 ├── components/            # React components
+│   ├── ui/               # Reusable UI components
+│   │   ├── blur-image.tsx          # Progressive image loading component
+│   │   ├── performance-badge.tsx   # Animated metric badges
+│   │   ├── scroll-reveal.tsx       # Scroll-triggered animations
+│   │   └── skill-constellation.tsx # Interactive skills graph (signature)
 │   ├── about.tsx         # About with highlight cards
 │   ├── command-palette.tsx # ⌘K command palette (signature feature)
 │   ├── contact.tsx       # Elevated contact section
 │   ├── experience.tsx    # Timeline with achievements
-│   ├── hero-section.tsx  # Hero with optimized images
+│   ├── hero-section.tsx  # Hero with enhanced animations
 │   ├── navbar.tsx        # Active section navigation
-│   ├── projects.tsx      # Project showcase with Next.js Image
-│   └── skills.tsx        # Skills with progress visualization
+│   ├── projects.tsx      # Project showcase with blur-up images
+│   └── skills.tsx        # Skills constellation + category grid
+├── hooks/                # Custom React hooks
+│   └── use-intersection.ts # IntersectionObserver hook for performance
 ├── lib/                  # Utility functions
 │   └── utils.ts         # Tailwind merge utilities
 ├── public/              # Static assets
@@ -165,20 +181,22 @@ npm start
 
 ## 📊 Performance Metrics
 
-- ⚡ **First Load JS**: 178 kB (optimized bundle splitting)
-- 🖼️ **Image Optimization**: AVIF/WebP formats, responsive sizing
+- ⚡ **First Load JS**: 186 kB (optimized bundle splitting with new components)
+- 🖼️ **Image Optimization**: Progressive blur-up loading, AVIF/WebP formats, responsive sizing
 - 🚀 **Static Generation**: Pre-rendered pages for instant loading
+- 🎬 **Animation Performance**: GPU-accelerated transforms, conditional will-change
 - ♿ **Accessibility**: WCAG 2.1 AA compliant with enhanced focus states
-- 📱 **Responsive**: Optimized breakpoints (640px, 768px, 1024px, 1280px)
+- 📱 **Responsive**: Fluid typography with clamp(), optimized breakpoints (640px, 768px, 1024px, 1280px)
 
 ## 🎯 What Makes It Stand Out
 
-1. **Command Palette** (`⌘K`): Keyboard-first navigation with fuzzy search - immediate signal of technical sophistication
-2. **Typography Excellence**: Optical sizing, proper kerning, and letter-spacing show attention to detail
-3. **Refined Animations**: Spring physics and proper easing curves feel premium, not generic
-4. **Skills Visualization**: Progress bars with animated fills and tabular numerics go beyond static grids
-5. **Design System**: Custom CSS variables enable consistent, maintainable design
-6. **Performance**: Proper image optimization, bundle management, and static generation
+1. **Interactive Skills Constellation**: Unique force-directed graph visualization with proficiency-based node sizing, dynamic connections, and magnetic hover effects - demonstrates advanced React and animation expertise
+2. **Command Palette** (`⌘K`): Keyboard-first navigation with fuzzy search - immediate signal of technical sophistication
+3. **Typography Excellence**: Fluid sizing with clamp(), optical letter-spacing (-0.04em to -0.01em), OpenType features (kerning, ligatures, tabular figures)
+4. **Performance-First Architecture**: GPU acceleration, IntersectionObserver-based scroll animations, progressive image loading with blur-up effects
+5. **Refined Animations**: Spring physics (cubic-bezier 0.34, 1.56, 0.64, 1), purposeful micro-interactions, and proper easing curves
+6. **Design System**: Semantic CSS variables, modular typography scale, and Swiss-inspired visual hierarchy
+7. **Production Quality**: Custom React hooks, reusable UI components, TypeScript strictness, zero build errors
 
 ## 🚀 Quick Start
 
