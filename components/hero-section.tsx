@@ -127,26 +127,37 @@ export const HeroSection = () => {
             className="flex justify-center lg:justify-end"
           >
             <div className="relative">
-              <div className="glass-effect p-2 rounded-full">
-                <div className="relative w-[300px] h-[300px] md:w-[400px] md:h-[400px]">
+              <motion.div
+                className="glass-effect p-2 rounded-full"
+                whileHover={{ scale: 1.02 }}
+                transition={{ type: "spring", stiffness: 300 }}
+              >
+                <div className="relative w-[300px] h-[300px] md:w-[400px] md:h-[400px] overflow-hidden rounded-full">
                   <Image
                     src="/images/abdalla.jpg"
                     alt="Abdalla Eldoumani"
                     fill
-                    className="rounded-full object-cover"
+                    className="rounded-full object-cover transition-transform duration-700 hover:scale-105"
                     priority
                     quality={95}
                     sizes="(max-width: 768px) 300px, 400px"
                   />
                 </div>
-              </div>
-              {/* Floating elements */}
-              <div className="absolute -top-4 -right-4 glass-effect p-3 rounded-full">
+              </motion.div>
+              {/* Floating elements with enhanced animations */}
+              <motion.div
+                className="absolute -top-4 -right-4 glass-effect p-3 rounded-full"
+                animate={{ y: [0, -8, 0] }}
+                transition={{ repeat: Infinity, duration: 3, ease: "easeInOut" }}
+              >
                 <div className="w-4 h-4 rounded-full animate-pulse" style={{ backgroundColor: 'var(--accent-tertiary)' }}></div>
-              </div>
-              <div className="absolute -bottom-4 -left-4 glass-effect p-2 rounded-lg">
+              </motion.div>
+              <motion.div
+                className="absolute -bottom-4 -left-4 glass-effect p-2 rounded-lg hover-lift"
+                whileHover={{ scale: 1.05 }}
+              >
                 <span className="text-sm font-semibold" style={{ color: 'var(--text-secondary)' }}>👋 Available for work</span>
-              </div>
+              </motion.div>
             </div>
           </motion.div>
         </div>
