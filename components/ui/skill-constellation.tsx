@@ -198,12 +198,14 @@ export const SkillConstellation = ({ skills }: SkillConstellationProps) => {
       onMouseDown={handleMouseDown}
       onMouseMove={handleMouseMove}
       onMouseUp={handleMouseUp}
-      onMouseLeave={handleMouseUp}
+      onMouseLeave={(e) => {
+        handleMouseUp();
+        setIsInteracting(false);
+      }}
       onTouchStart={handleTouchStart}
       onTouchMove={handleTouchMove}
       onTouchEnd={handleTouchEnd}
       onMouseEnter={() => setIsInteracting(true)}
-      onMouseLeave={() => setIsInteracting(false)}
     >
       {/* Zoom controls */}
       <div className="absolute top-4 right-4 z-50 flex flex-col gap-2">
