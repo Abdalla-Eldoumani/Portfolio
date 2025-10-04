@@ -147,7 +147,7 @@ export const Contact = () => {
             color: 'var(--text-muted)'
           }}
         >
-          <p className="text-sm">
+          <p className="text-sm text-center mx-auto">
             &copy; {new Date().getFullYear()} Abdalla Eldoumani. Crafted with precision and attention to detail.
           </p>
         </motion.div>
