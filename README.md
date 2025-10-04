@@ -12,7 +12,7 @@ I'm a Computer Science student at the University of Calgary specializing in high
 
 ### 🎯 Signature Interactions
 - **⌘K Command Palette**: Professional keyboard-first navigation with fuzzy search
-- **Interactive Skills Constellation**: Force-directed graph visualization with proficiency-based sizing and dynamic connections
+- **Interactive Skills Constellation**: Force-directed graph visualization with proficiency-based sizing, dynamic connections, zoom & pan functionality (0.5x-2.0x), smart tooltip positioning, and scroll lock during interaction
 - **Refined Micro-interactions**: Spring physics animations (cubic-bezier 0.34, 1.56, 0.64, 1) with purposeful feedback
 - **Performance Badges**: Animated metric displays showcasing technical achievements
 
@@ -190,7 +190,7 @@ npm start
 
 ## 🎯 What Makes It Stand Out
 
-1. **Interactive Skills Constellation**: Unique force-directed graph visualization with proficiency-based node sizing, dynamic connections, and magnetic hover effects - demonstrates advanced React and animation expertise
+1. **Interactive Skills Constellation**: Unique force-directed graph visualization with proficiency-based node sizing, project-based skill connections, zoom & pan functionality (Ctrl/Cmd + wheel), smart tooltip positioning with viewport boundary detection, and scroll lock during interaction - demonstrates advanced React and animation expertise
 2. **Command Palette** (`⌘K`): Keyboard-first navigation with fuzzy search - immediate signal of technical sophistication
 3. **Typography Excellence**: Fluid sizing with clamp(), optical letter-spacing (-0.04em to -0.01em), OpenType features (kerning, ligatures, tabular figures)
 4. **Performance-First Architecture**: GPU acceleration, IntersectionObserver-based scroll animations, progressive image loading with blur-up effects
@@ -237,6 +237,8 @@ npm start        # Serves production build
 - **g**: Open GitHub profile
 - **l**: Open LinkedIn profile
 - **r**: Download resume
+- **Ctrl/Cmd + Scroll**: Zoom skills constellation (0.5x-2.0x)
+- **Click & Drag**: Pan skills constellation when zoomed
 
 ## 🤝 Connect With Me
 
